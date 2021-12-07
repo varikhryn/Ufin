@@ -1,0 +1,65 @@
+.prewiew-rybric {
+  width: 100%;
+  min-height: 660px;
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 72px 80px 72px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #0f2035 0%, rgba(15, 32, 53, 0) 100%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      z-index: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    @include pf-semi-bold;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__label {
+    opacity: 0.5;
+    font-family: inherit;
+    font-weight: inherit;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 24px;
+  }
+
+  &__description {
+    @include pf-regular;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-top: 25px;
+  }
+
+  &__link {
+    margin-top: 28px;
+  }
+}

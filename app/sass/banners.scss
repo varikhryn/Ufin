@@ -1,0 +1,153 @@
+.banners {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 425px;
+  position: relative;
+
+  &__content {
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(
+      269.83deg,
+      #0b253c 23.59%,
+      rgba(11, 37, 60, 0) 124.86%
+    );
+    opacity: 0.8;
+    z-index: 1;
+  }
+
+  &_main {
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      content: none;
+    }
+
+    .banners__content {
+      background-position: 0 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &::after,
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+
+      &::after {
+        background: linear-gradient(
+          180deg,
+          #0f2035 0%,
+          rgba(47, 69, 96, 0) 100%
+        );
+        opacity: 0.4;
+      }
+
+      &::before {
+        background-color: rgba(15, 32, 53, 0.4);
+      }
+
+      .banners__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .banners__tittle {
+        font-size: 48px;
+      }
+
+      .banners__link {
+        margin-top: 28px;
+      }
+    }
+
+    .banners__container {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 23px 15px;
+    position: relative;
+    z-index: 3;
+
+    &-text {
+      font-size: 14px;
+      @include pf-semi-bold;
+      font-weight: 600;
+    }
+  }
+
+  &-white {
+    height: 495px;
+    &::before {
+      content: none;
+    }
+
+    .banners__description {
+      margin-top: 18px;
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__wrapper {
+    max-width: 45%;
+  }
+
+  &__tittle {
+    @include pf-semi-bold;
+    font-size: 36px;
+  }
+
+  &__description,
+  &__link {
+    margin-top: 25px;
+  }
+
+  &__description {
+    font-size: 16px;
+  }
+
+  &__link {
+    margin-top: 25px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 33px;
+
+    .btn {
+      &:not(:last-child) {
+        margin-right: 17px;
+      }
+    }
+  }
+}

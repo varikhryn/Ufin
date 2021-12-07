@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>VT</title>
+    <meta name="description" content="HTML template">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="header">
+        <button class="header__burger">
+            <svg width="30" height="50" viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button>
+    </header>
+    <!--HEADER-->
+
+    <!-- MAIN -->
+    <main class="main">
+        <!--TABS-->
+        <div class="tab">
+            <ul class="tab__navigation">
+                <li class="tab__navigation-item _active" data-tab="tab-1">Таб 1</li>
+                <li class="tab__navigation-item" data-tab="tab-2">Таб 2</li>
+                <li class="tab__navigation-item" data-tab="tab-3">Таб 3</li>
+            </ul>
+        </div>
+
+        <div class="tab__content _visible" data-tab-content id="tab-1">
+            <h3>Таб 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ducimus fugit
+                corrupti culpa libero quam mollitia magni pariatur, quos soluta commodi porro
+                voluptatem! Voluptate nobis veniam voluptatum, quisquam et obcaecati?
+            </p>
+        </div>
+
+        <div class="tab__content" data-tab-content id="tab-2">
+            <h3>Таб 2</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ducimus fugit
+                corrupti culpa libero quam mollitia magni pariatur, quos soluta commodi porro
+                voluptatem! Voluptate nobis veniam voluptatum, quisquam et obcaecati?
+            </p>
+        </div>
+
+        <div class="tab__content" data-tab-content id="tab-3">
+            <h3>Таб 3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ducimus fugit
+                corrupti culpa libero quam mollitia magni pariatur, quos soluta commodi porro
+                voluptatem! Voluptate nobis veniam voluptatum, quisquam et obcaecati?
+            </p>
+        </div>
+
+        <!--ACCORDION-->
+        <div class="accordion">
+            <div class="accordion__item">
+                <div class="accordion__item-trigger">trigger</div>
+                <div class="accordion__item-content">
+                    content <br />
+                    content <br />
+                    content <br />
+                </div>
+            </div>
+
+            <div class="accordion__item">
+                <div class="accordion__item-trigger">trigger</div>
+                <div class="accordion__item-content">
+                    content <br />
+                    content <br />
+                    content <br />
+                </div>
+            </div>
+            <div class="accordion__item">
+                <div class="accordion__item-trigger">trigger</div>
+                <div class="accordion__item-content">
+                    content <br />
+                    content <br />
+                    content <br />
+                </div>
+            </div>
+        </div>
+        
+        <!--MODAL-BTN-->
+        <button data-modal-button="modal-1" class="btn" type="button">
+            Open
+        </button>
+
+        <div class="slider">
+            <div class="slider__navigation">
+                <button class="swiper-arrow swiper-arrow--prev"></button>
+                <button class="swiper-arrow swiper-arrow--next"></button>
+            </div>
+            <div class="slider__container _swiper">
+                <div class="slider__item">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="block _anim-item"></div>
+    </main>
+    <!-- MAIN -->
+
+    <!--FOOTER-->
+    <footer class="footer">
+
+    </footer>
+    <!--FOOTER-->
+
+    <!-- MODAL -->
+    <div class="modal" id="modal-1" data-modal>
+        <div class="modal__body">
+            <div class="modal__content">
+                <div class="modal__title">Congratulation!</div>
+                <div class="modal__subtitle">You completed all tasks</div>
+                <button type="button" class="close-btn" data-modal-close>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><line x1="13" y1="1" x2="1" y2="13"/><line x1="1" y1="1" x2="13" y2="13"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!--	<script src="js/scripts.min.js.js"></script>-->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/_ready.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "PF Beau Sans Pro Light Italic";
+  src: url("../fonts/PFBeauSansPro-LightItalic/PFBeauSansPro-LightItalic.woff")
+    format("woff");
+  src: url("../fonts/PFBeauSansPro-LightItalic/PFBeauSansPro-LightItalic.ttf")
+    format("ttf");
+  src: url("../fonts/PFBeauSansPro-LightItalic/PFBeauSansPro-LightItalic.eot")
+    format("eot");
+  font-style: italic;
+  font-weight: 300;
+}
+
+@mixin pf-light-italic {
+  font-family: "PF Beau Sans Pro Light Italic", sans-serif;
+}
+
+@font-face {
+  font-family: "PF Beau Sans Pro Regular";
+  src: url("../fonts/PFBeauSansPro-Regular/PFBeauSansPro-Regular.woff")
+    format("woff");
+  src: url("../fonts/PFBeauSansPro-Regular/PFBeauSansPro-Regular.ttf")
+    format("ttf");
+  src: url("../fonts/PFBeauSansPro-Regular/PFBeauSansPro-Regular.eot")
+    format(".eot");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@mixin pf-regular {
+  font-family: "PF Beau Sans Pro Regular", sans-serif;
+}
+
+@font-face {
+  font-family: "PF Beau Sans Pro Semi Bold";
+  src: url("../fonts/PFBeauSansPro-SemiBold/PFBeauSansPro-SemiBold.woff")
+    format("woff");
+  src: url("../fonts/PFBeauSansPro-SemiBold/PFBeauSansPro-SemiBold.ttf")
+    format("ttf");
+  src: url("../fonts/PFBeauSansPro-SemiBold/PFBeauSansPro-SemiBold.eot")
+    format("eot");
+  font-style: italic;
+  font-weight: 600;
+}
+
+@mixin pf-semi-bold {
+  font-family: "PF Beau Sans Pro Semi Bold", sans-serif;
+}
+
+@font-face {
+  font-family: "PF Beau Sans Pro Bold";
+  src: url("../fonts/PFBeauSansPro-Bold/PFBeauSansPro-Bold.woff") format("woff");
+  src: url("../fonts/PFBeauSansPro-Bold/PFBeauSansPro-Bold.ttf") format("ttf");
+  src: url("../fonts/PFBeauSansPro-Bold/PFBeauSansPro-Bold.eot") format("eot");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin pf-bold {
+  font-family: "PF Beau Sans Pro Bold", sans-serif;
+}

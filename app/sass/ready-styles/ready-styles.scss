@@ -1,0 +1,37 @@
+//TABS
+.tab {
+  &__navigation {
+    &-item {
+
+      &._active {
+
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &._visible {
+      display: block;
+    }
+  }
+}
+//ACCORDION
+.accordion {
+  &__item {
+    &-trigger {
+
+    }
+
+    &-content {
+      display: none;
+    }
+
+    &._active {
+      .accordion__item-content {
+        display: block;
+      }
+    }
+  }
+}

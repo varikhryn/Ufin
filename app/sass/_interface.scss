@@ -1,0 +1,225 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none;
+}
+
+::placeholder {
+  color: var(--text);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  font-family: inherit;
+  color: var(--text);
+  border: 1px solid var(--border-color);
+
+  &:focus:required:invalid {
+    border-color: var(--invalid-color);
+  }
+
+  &:required:valid {
+    border-color: var(--valid-color);
+  }
+}
+
+input {
+  color: #000;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+body {
+  @include column-b;
+  font-size: 16px;
+  position: relative;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  @include pf-regular;
+  background-color: #fff;
+  font-weight: 400;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  color: #0b253c;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  // padding: 0 15px;
+  margin: 0 auto;
+}
+
+//стили для текстовых страниц
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #1b7f6d;
+  transition: opacity 0.3s ease;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 14px;
+  line-height: inherit;
+}
+
+button {
+  @include pf-semi-bold;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+ol {
+  counter-reset: my-item;
+  li {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+    counter-increment: my-item;
+
+    &::before {
+      content: counter(my-item) ".";
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+    }
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+h2,
+h3 {
+  @include pf-semi-bold;
+  font-weight: 600;
+  color: inherit;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.wp-editor {
+  h2,
+  h3 {
+    padding: 15px 0;
+  }
+
+  p {
+    padding: 8px 0;
+  }
+
+  ul {
+    padding: 8px 0;
+  }
+
+  ol {
+    padding: 8px 0;
+  }
+
+  b {
+    @include pf-semi-bold;
+    font-weight: 600;
+  }
+
+  a {
+    color: #00a3ff;
+  }
+}
+
+.arror-dropdown {
+  & > a,
+  & > button {
+    position: relative;
+    padding-right: 14px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: #1c2024;
+      width: 5px;
+      height: 1px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    &::before {
+      right: 3px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      right: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &.active {
+    a,
+    button {
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before,
+      &::after {
+        background-color: #1b7f6d;
+      }
+    }
+  }
+}
