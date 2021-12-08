@@ -15,7 +15,7 @@
     &._active {
       .accordion__item {
         &-trigger-text {
-          color: #1b7f6d;
+          color: $color-commpany;
         }
 
         &-content {
@@ -35,7 +35,7 @@
 
           &::after,
           &::before {
-            background-color: #1b7f6d;
+            background-color: $color-commpany;
           }
         }
       }
@@ -53,7 +53,6 @@
 
       &-text {
         @include pf-semi-bold;
-        font-weight: 600;
       }
 
       &-btn {

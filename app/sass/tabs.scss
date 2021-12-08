@@ -50,13 +50,13 @@
         bottom: 0;
         width: 0;
         height: 3px;
-        background-color: #1b7f6d;
+        background-color: $color-commpany;
         transition: width 0.3s ease;
       }
 
       &._active,
       &:hover:not(._active) {
-        color: #1b7f6d;
+        color: $color-commpany;
         &::after {
           width: 80%;
         }

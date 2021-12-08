@@ -28,6 +28,10 @@
         padding: 5px 14px 5px 5px;
       }
     }
+
+    &-item:not(:nth-last-of-type(1)) {
+      margin-right: 8px;
+    }
   }
 
   &__enter {
@@ -38,6 +42,9 @@
 
   &__logo {
     margin: 0 12px 0 0;
+    width: 71px;
+    height: auto;
+    object-fit: contain;
   }
 
   &__switch {

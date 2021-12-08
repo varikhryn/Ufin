@@ -244,7 +244,7 @@
     .swiper-pagination-bullet {
       font-size: 16px;
       @include pf-semi-bold;
-      color: #fff;
+      color: $color-white;
       width: max-content;
       height: auto;
       display: inline-flex;
@@ -267,7 +267,7 @@
           position: absolute;
           left: 0;
           bottom: -21px;
-          background-color: #1b7f6d;
+          background-color: $color-commpany;
           width: 100%;
           height: 1px;
         }

@@ -12,6 +12,7 @@
 
 @mixin pf-light-italic {
   font-family: "PF Beau Sans Pro Light Italic", sans-serif;
+  font-weight: 300;
 }
 
 @font-face {
@@ -28,6 +29,7 @@
 
 @mixin pf-regular {
   font-family: "PF Beau Sans Pro Regular", sans-serif;
+  font-weight: 400;
 }
 
 @font-face {
@@ -44,6 +46,7 @@
 
 @mixin pf-semi-bold {
   font-family: "PF Beau Sans Pro Semi Bold", sans-serif;
+  font-weight: 600;
 }
 
 @font-face {
@@ -57,4 +60,5 @@
 
 @mixin pf-bold {
   font-family: "PF Beau Sans Pro Bold", sans-serif;
+  font-weight: 700;
 }

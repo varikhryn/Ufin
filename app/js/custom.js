@@ -41,10 +41,71 @@ document.addEventListener("DOMContentLoaded", function (event) {
   setTabs();
   setAccordion();
   toggleBlock(document.querySelectorAll(".drd-lang"));
+  setModalPadding();
 
   function setFunctionResize() {
     setPaddigForRubric();
+    setModalPadding();
   }
+
+  // Pop-up menu
+  const popUpMenu = () => {
+    const header = document.querySelector("header"),
+      headerMenuItem = document.querySelectorAll(".header__menu-item"),
+      modalMenu = document.querySelector(".modal-menu"),
+      modalMenuContent = document.querySelectorAll(".modal-menu__content"),
+      modalMenuContentWr = document.querySelectorAll(".modal-menu__content-wr");
+    if (document.body.clientWidth > 1200) {
+      headerMenuItem.forEach((item, i) => {
+        item.addEventListener("mouseenter", () => {
+          showModalMenu(item, i);
+        });
+
+        item.addEventListener("click", () => {
+          showModalMenu(item, i);
+        });
+      });
+
+      modalMenu.addEventListener("mouseleave", () => {
+        hideModalMenu();
+      });
+
+      modalMenuContentWr.forEach((element) => {
+        element.addEventListener("mouseleave", () => {
+          hideModalMenu();
+        });
+      });
+    }
+
+    function showModalMenu(item, i) {
+      removeActiveClass(item);
+      modalMenuContent.forEach((item, i) => {
+        removeActiveClass(item);
+      });
+
+      header.classList.add("_active");
+      modalMenu.classList.add("_active");
+      modalMenuContent[i].classList.add("_active");
+      headerMenuItem.forEach((item) => {
+        removeActiveClass(item);
+      });
+      headerMenuItem[i].classList.add("_active");
+    }
+
+    function hideModalMenu() {
+      removeActiveClass(header);
+      removeActiveClass(modalMenu);
+      modalMenuContent.forEach((element) => {
+        removeActiveClass(element);
+      });
+
+      headerMenuItem.forEach((item) => {
+        removeActiveClass(item);
+      });
+    }
+  };
+
+  popUpMenu();
 });
 
 function hideBlckWhenClickOtherBlock(e, elements) {
@@ -52,10 +113,10 @@ function hideBlckWhenClickOtherBlock(e, elements) {
     let target = e.target;
     elements.forEach((element) => {
       let its_menu = target == element || element.contains(target);
-      let element_is_active = element.classList.contains("active");
+      let element_is_active = element.classList.contains("_active");
 
       if (!its_menu && element_is_active) {
-        element.classList.toggle("active");
+        element.classList.toggle("_active");
       }
     });
   }
@@ -65,7 +126,7 @@ function toggleBlock(elements) {
   if (elements.length > 0) {
     elements.forEach((element) => {
       element.addEventListener("click", function (e) {
-        this.classList.toggle("active");
+        this.classList.toggle("_active");
         e.stopPropagation();
       });
     });
@@ -106,6 +167,19 @@ function setSliderHistory() {
         return '<span class="' + className + '">' + arrYears[index] + "</span>";
       },
     },
+  });
+}
+
+function setModalPadding() {
+  if (!document.querySelectorAll(".pd-header")) return;
+
+  if (!document.querySelector("header")) return;
+
+  const pdHeader = document.querySelectorAll(".pd-header");
+  const header = document.querySelector("header");
+
+  pdHeader.forEach((element) => {
+    element.style.paddingTop = getElemHeight([header]) + "px";
   });
 }
 
@@ -314,6 +388,11 @@ function offset(el) {
 }
 
 // optimization function
+function removeActiveClass(item) {
+  if (item.classList.contains("_active")) {
+    item.classList.remove("_active");
+  }
+}
 function setHeight100() {
   if (document.querySelectorAll("._100vh").length <= 0) return;
   const blck100Vh = document.querySelectorAll("._100vh");
@@ -333,4 +412,13 @@ function setHeight100() {
 function getPaddingContainer() {
   let myContainer = document.querySelectorAll(".container")[0];
   return (innerWidth - myContainer.getBoundingClientRect().width) / 2 + "px";
+}
+
+function getElemHeight(selector) {
+  let sumHeight = 0;
+  selector.forEach((item) => {
+    let itemHeight = item.getBoundingClientRect().height;
+    sumHeight += itemHeight;
+  });
+  return sumHeight;
 }

@@ -2,7 +2,7 @@
   position: relative;
   width: max-content;
 
-  &.active {
+  &._active {
     & > ul {
       display: inline-flex;
     }
@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
   & > ul {
@@ -23,8 +24,8 @@
     margin-left: auto;
     margin-right: 0;
     min-width: 60px;
-    background-color: #ffffff;
-    border: 1px solid #1b7f6d;
+    background-color: $color-white;
+    border: 1px solid $color-commpany;
     display: none;
     z-index: 10;
     flex-direction: column;
@@ -45,7 +46,7 @@
         transition: color 0.3s ease;
 
         &:hover {
-          color: #1b7f6d;
+          color: $color-commpany;
         }
       }
     }

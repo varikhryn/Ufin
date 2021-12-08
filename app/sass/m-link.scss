@@ -32,11 +32,11 @@
     &:hover {
       .m-link {
         &__title {
-          color: #1b7f6d;
+          color: $color-commpany;
 
           &::before,
           &::after {
-            background-color: #1b7f6d;
+            background-color: $color-commpany;
           }
         }
         &__img {
@@ -61,7 +61,7 @@
       content: "";
       position: absolute;
       right: 0;
-      background-color: #0b253c;
+      background-color: $color-base;
       height: 2px;
       width: 6px;
       border-radius: 5px;
