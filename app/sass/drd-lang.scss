@@ -14,11 +14,17 @@
     justify-content: center;
     text-transform: uppercase;
     cursor: pointer;
+    color: #1c2024;
+    @include pf-regular;
+
+    &:hover {
+      color: $color-commpany;
+    }
   }
 
   & > ul {
     position: absolute;
-    top: 24px;
+    top: 34px;
     left: 0;
     right: 0;
     margin-left: auto;

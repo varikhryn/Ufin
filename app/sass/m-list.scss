@@ -66,7 +66,6 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     transition: color 0.3s ease;
 
     &:hover {
@@ -89,7 +88,7 @@
     width: 100%;
     max-width: 24px;
     object-fit: contain;
-    height: auto;
+    height: max-content;
     margin-right: 16px;
   }
 
@@ -119,9 +118,12 @@
   }
 
   &__title {
+    width: calc(100% - 40px);
     font-size: 16px;
     @include pf-semi-bold;
     color: #1c2024;
+    word-break: break-word;
+    padding: 2px 0;
   }
 
   &__description {
@@ -130,5 +132,18 @@
     color: #3c4249;
     margin-top: 9px;
     padding-left: 40px;
+  }
+
+  &_mobile-menu {
+    &.m-list {
+      .m-list__item {
+        margin: 10px 0;
+      }
+
+      .m-list__title {
+        font-size: 15px;
+        padding: 3px 0;
+      }
+    }
   }
 }

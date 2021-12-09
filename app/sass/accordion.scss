@@ -48,11 +48,12 @@
       position: relative;
       cursor: pointer;
       padding-right: 100px;
-
+      word-break: break-word;
       padding: 22px 20px 22px 31px;
 
       &-text {
         @include pf-semi-bold;
+        color: $color-base;
       }
 
       &-btn {
@@ -68,6 +69,12 @@
       flex-direction: column;
       padding-top: 24px;
       padding: 24px 20px 22px 31px;
+
+      &-title {
+        margin: 23px 0 14px;
+        font-size: 14px;
+        @include pf-bold;
+      }
     }
 
     &-description {
@@ -81,5 +88,65 @@
 
   &__link {
     margin: 20px auto 0;
+  }
+
+  &_mobile-menu {
+    .accordion {
+      &__item {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        margin-bottom: 0;
+
+        &:not(:nth-last-of-type(1)) {
+          border-bottom: none;
+        }
+
+        &-trigger {
+          cursor: default;
+          padding: 15px;
+
+          &-text {
+            font-size: 14px;
+            color: #1c2024;
+          }
+
+          &-btn {
+            transition: transform 0.3s ease, color 0.3s ease;
+            transform: rotate(-90deg);
+            top: 16px;
+            right: 15px;
+            & > button {
+              display: flex;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &-content {
+          padding: 0 15px;
+        }
+      }
+    }
+
+    .accordion__item._active {
+      padding-bottom: 21px;
+
+      .accordion__item-trigger {
+        padding-bottom: 15px;
+      }
+
+      .accordion__item-trigger-btn {
+        transform: rotate(0);
+
+        & > button {
+          & > svg {
+            path {
+              fill: $color-commpany;
+            }
+          }
+        }
+      }
+    }
   }
 }

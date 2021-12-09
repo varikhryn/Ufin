@@ -8,36 +8,109 @@
   padding: 16px 0;
   color: #1c2024;
   z-index: 30;
+  transition: background-color 0.3s ease;
+
+  @media screen and (min-width: $is-descktop) {
+    &_opacity:not(._active) {
+      .drd-lang__current,
+      .header__enter,
+      .header__menu {
+        color: $color-white;
+      }
+
+      .arror-dropdown > a::before,
+      .arror-dropdown > button::before,
+      .arror-dropdown > a::after,
+      .arror-dropdown > button::after {
+        background-color: $color-white;
+      }
+
+      .btn-switch__item:not(._active) {
+        background-color: transparent;
+        color: $color-white;
+
+        &:hover {
+          background-color: $color-commpany;
+        }
+      }
+
+      .header__logo_black {
+        display: none;
+      }
+
+      .header__logo_white {
+        display: block;
+      }
+    }
+  }
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $is-descktop) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__menu {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-    margin: 0 15px 0;
-    color: #1c2024;
+    display: none;
 
-    & > li {
-      & > a {
-        color: inherit;
-        padding: 5px 14px 5px 5px;
+    @media screen and (min-width: $is-descktop) {
+      display: flex;
+      flex-grow: 1;
+      margin: 0 15px 0;
+      color: #1c2024;
+      transition: color 0.3s ease;
+
+      &-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & > li {
+          & > a {
+            color: inherit;
+            padding: 5px 14px 5px 5px;
+            transition: color 0.3s ease;
+
+            &:hover {
+              opacity: 1;
+              color: $color-commpany;
+            }
+          }
+        }
       }
-    }
 
-    &-item:not(:nth-last-of-type(1)) {
-      margin-right: 8px;
+      &-item {
+        &._active {
+          & > a {
+            color: $color-commpany;
+          }
+        }
+        &:not(:nth-last-of-type(1)) {
+          margin-right: 8px;
+        }
+      }
     }
   }
 
   &__enter {
-    margin: 0 6px 0;
-    color: inherit;
-    padding: 5px;
+    display: none;
+    @media screen and (min-width: $is-descktop) {
+      display: flex;
+      margin: 0 6px 0;
+      color: inherit;
+      padding: 5px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+        color: $color-commpany;
+      }
+    }
   }
 
   &__logo {
@@ -45,24 +118,83 @@
     width: 71px;
     height: auto;
     object-fit: contain;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &_white {
+      display: none;
+    }
   }
 
   &__switch {
-    margin: 0 12px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    order: 1;
+    margin-top: 4px;
+
+    @media screen and (min-width: $is-mobile) {
+      width: max-content;
+      justify-content: flex-start;
+      order: 0;
+      margin: 0 30px 0;
+    }
+
+    @media screen and (min-width: $is-descktop) {
+      flex-grow: 0;
+      margin: 0 12px 0;
+    }
+
+    .btn-switch {
+      width: 100%;
+
+      &__item {
+        width: 50%;
+      }
+    }
   }
 
   &__price {
-    margin: 0 12px;
+    display: none;
+    @media screen and (min-width: $is-descktop) {
+      display: flex;
+      margin: 0 12px;
 
-    &-link {
-      white-space: nowrap;
+      &-link {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__lang {
+    margin: auto 0 auto auto;
+  }
+
+  &__burger {
+    display: flex;
+    width: 24px;
+    height: auto;
+    object-fit: contain;
+    margin-left: 30px;
+    cursor: pointer;
+
+    & > svg {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: none;
     }
   }
 }
 
 .line {
   fill: none;
-  stroke: #000;
+  stroke: $color-bunker;
   stroke-width: 6;
   -webkit-transition: stroke-dasharray 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
