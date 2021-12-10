@@ -133,6 +133,8 @@ function changeTypeHeader() {
   )
     return;
 
+  console.log(window.pageYOffset);
+
   const header = document.querySelector("header");
 
   if (window.innerWidth > 1200) {

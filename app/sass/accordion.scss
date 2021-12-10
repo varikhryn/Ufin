@@ -60,6 +60,10 @@
         position: absolute;
         top: 22px;
         right: 20px;
+
+        & > button {
+          padding: 7px 0 7px 7px;
+        }
       }
     }
 
