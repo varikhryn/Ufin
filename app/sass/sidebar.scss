@@ -33,6 +33,9 @@
           padding: 15px 20px;
         }
       }
+      &:before {
+        content: unset;
+      }
     }
 
     &-link {
