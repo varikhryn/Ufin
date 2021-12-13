@@ -44,26 +44,37 @@
     &-trigger {
       width: 100%;
       display: flex;
-      align-items: center;
+      align-items: stretch;
+      justify-content: space-between;
       position: relative;
       cursor: pointer;
       padding-right: 100px;
       word-break: break-word;
-      padding: 22px 20px 22px 31px;
+      padding: calc(12px + 10 * ((100vw - 320px) / (1200 - 320)))
+        calc(10px + 10 * ((100vw - 320px) / (1200 - 320)))
+        calc(12px + 10 * ((100vw - 320px) / (1200 - 320)))
+        calc(21px + 10 * ((100vw - 320px) / (1200 - 320)));
+      @media screen and (min-width: 1200px) {
+        padding: 22px 20px 22px 31px;
+      }
 
       &-text {
+        width: calc(100% - 40px);
+        font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
+        margin: auto 0;
         @include pf-semi-bold;
         color: $color-base;
+        @media screen and (min-width: 1200px) {
+          font-size: 16px;
+        }
       }
 
       &-btn {
-        position: absolute;
-        top: 22px;
-        right: 20px;
-
-        & > button {
-          padding: 7px 0 7px 7px;
-        }
+        padding: 7px;
+        margin-right: -7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 

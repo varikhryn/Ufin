@@ -1,3 +1,324 @@
 .footer {
-  flex-shrink: 0
+  flex-shrink: 0;
+  padding: 40px 0;
+  @media screen and (min-width: 768px) {
+    padding: 77px 0 28px;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &_logo {
+    margin-top: 72px;
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+      max-width: 300px;
+      align-items: flex-start;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    order: -1;
+    @media screen and (min-width: 768px) {
+      order: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: calc(100% - 300px);
+    }
+
+    &-item {
+      width: 100%;
+      @media screen and (min-width: 1200px) {
+        max-width: 240px;
+      }
+
+      .accordion_mobile-menu {
+        & .accordion {
+          &__item {
+            border: none;
+            @media screen and (min-width: 1200px) {
+              border-radius: 0;
+              margin-top: 32px;
+            }
+            &-trigger {
+              padding: 12px 0 12px;
+              @media screen and (min-width: 1200px) {
+                padding: 0;
+              }
+              &-text {
+                font-size: 16px;
+                @include pf-bold;
+                color: $color-white;
+                @media screen and (min-width: 1200px) {
+                  width: 100%;
+                }
+              }
+
+              &-btn {
+                right: -3px;
+                top: 12px;
+                @media screen and (min-width: 1200px) {
+                  display: none;
+                }
+
+                & > svg {
+                  path {
+                    fill: $color-white;
+                  }
+                }
+              }
+            }
+
+            &-content {
+              @media screen and (min-width: 1200px) {
+                display: flex;
+                padding: 0;
+                margin-top: 16px;
+              }
+            }
+
+            &._active {
+              padding-bottom: 8px;
+              .accordion {
+                &__item {
+                  &-trigger {
+                    &-text {
+                      color: $color-white;
+                    }
+                  }
+
+                  &-content {
+                    padding: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .m-list_column {
+      & .m-list {
+        &:not(:nth-child(1)) {
+          margin-top: 32px;
+        }
+        &__link {
+          &:hover {
+            opacity: 1;
+
+            .m-list__title {
+              color: $color-white;
+            }
+          }
+        }
+
+        &__title {
+          width: 100%;
+          font-size: 14px;
+          color: $color-white;
+          opacity: 0.5;
+          @media screen and (min-width: 1200px) {
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &__item {
+          padding: 8px 0;
+
+          &:nth-of-type(n) {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__switch {
+    margin-top: 23px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      width: max-content;
+    }
+
+    .btn {
+      width: 50%;
+      @media screen and (min-width: 768px) {
+        width: max-content;
+      }
+    }
+  }
+
+  &__contact {
+    margin-top: 34px;
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      font-size: 14px;
+      color: $color-white;
+      text-align: center;
+      @media screen and (min-width: 768px) {
+        text-align: left;
+      }
+
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+
+      br {
+        display: none;
+        @media screen and (min-width: 768px) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &__social {
+    margin-top: 46px;
+  }
+
+  &__bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 28px;
+    margin-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 58px;
+    }
+  }
+
+  &__legal {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    order: 2;
+
+    @media screen and (min-width: 1024px) {
+      order: 0;
+    }
+
+    &-menu {
+      margin-top: 31px;
+      @media screen and (min-width: 1024px) {
+        margin-top: 12px;
+      }
+
+      .lists__items {
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (min-width: 1024px) {
+          margin-top: 12px;
+          flex-direction: row;
+          align-items: flex-start;
+        }
+
+        .lists__item {
+          width: max-content;
+
+          &:not(:first-child) {
+            margin-top: 10px;
+
+            @media screen and (min-width: 1024px) {
+              margin-top: 0;
+            }
+          }
+
+          &:not(:first-child)::before {
+            content: unset;
+
+            @media screen and (min-width: 1024px) {
+              content: "|";
+            }
+          }
+        }
+      }
+    }
+
+    &-text {
+      font-size: 14px;
+      margin-top: 29px;
+      text-align: center;
+      order: 2;
+      @media screen and (min-width: 1024px) {
+        margin-top: 0;
+        text-align: left;
+        order: 0;
+      }
+    }
+  }
+
+  &__apps {
+    order: 1;
+
+    @media screen and (min-width: 1024px) {
+      order: 0;
+    }
+
+    &.lists_image {
+      .lists__item {
+        &:nth-child(n) {
+          margin-left: 8px;
+        }
+
+        &:first-child {
+          order: 2;
+          margin-left: 8px;
+
+          @media screen and (min-width: 520px) {
+            margin-left: 24px;
+          }
+
+          @media screen and (min-width: 1024px) {
+            order: 0;
+            margin-left: 0;
+          }
+        }
+
+        &:nth-child(2) {
+          margin-left: 0;
+
+          @media screen and (min-width: 1024px) {
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+  }
 }

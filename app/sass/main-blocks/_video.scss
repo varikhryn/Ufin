@@ -1,0 +1,77 @@
+.video {
+  width: 100%;
+
+  &__title {
+    font-size: calc(20px + 7 * ((100vw - 320px) / (1200 - 320)));
+    @media screen and (min-width: 1200px) {
+      font-size: 27px;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+
+    &:first-child {
+      padding: 45px 15px;
+      @media screen and (min-width: 768px) {
+        padding: 45px 50px;
+      }
+      @media screen and (min-width: 1200px) {
+        padding: 45px 120px;
+      }
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 57%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      object-fit: contain;
+      object-position: 50% 50%;
+      opacity: 0.6;
+    }
+  }
+
+  &__play {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    @media screen and (min-width: 768px) {
+      margin: auto auto auto -35px;
+    }
+  }
+}

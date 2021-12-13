@@ -97,6 +97,18 @@
     border: 1px solid $color-commpany;
   }
 
+  &_base {
+    background-color: $color-base;
+    color: $color-white;
+    border: 1px solid $color-commpany;
+  }
+
+  &_base-gradient {
+    background: rgba(27, 127, 109, 0.3);
+    backdrop-filter: blur(14px);
+    color: #fff;
+  }
+
   &_light-grey {
     background-color: #e5e5e5;
   }
@@ -125,10 +137,15 @@
   &_cirle {
     padding: 3px;
     border-radius: 50%;
-    min-width: 70px;
-    height: 70px;
+    min-width: 30px;
+    height: 30px;
     max-width: max-content;
     transition: box-shadow 0.4s linear;
+
+    @media screen and (min-width: 1350px) {
+      min-width: 70px;
+      height: 70px;
+    }
   }
 
   &_cirle:hover {
@@ -137,9 +154,8 @@
 
   &_cirle {
     img {
-      max-width: 80%;
-      max-height: 80%;
-      margin-left: 4px;
+      max-width: 50%;
+      max-height: 50%;
     }
   }
 
@@ -183,6 +199,28 @@
   &_large {
     min-width: 225px;
     max-width: max-content;
+  }
+  &_biggest {
+    padding: calc(16px + 11 * ((100vw - 320px) / (1200 - 320)))
+      calc(12px + 11 * ((100vw - 320px) / (1200 - 320)))
+      calc(16px + 11 * ((100vw - 320px) / (1200 - 320)))
+      calc(14px + 22 * ((100vw - 320px) / (1200 - 320)));
+    font-size: calc(18px + 4 * ((100vw - 320px) / (1200 - 320)));
+    @media screen and (min-width: 1200px) {
+      font-size: 22px;
+      padding: 27px 23px 27px 36px;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      margin-left: 50px;
+      transition: transform 0.3s ease;
+    }
   }
 
   &_full {

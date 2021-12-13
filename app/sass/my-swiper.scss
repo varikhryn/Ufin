@@ -4,28 +4,47 @@
 
   &__wrapper {
     z-index: 1;
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__container {
+    width: 100%;
+    position: relative;
   }
 
   &__slider {
-    overflow: hidden;
+    position: static;
+    @media screen and (min-width: 520px) {
+      position: relative;
+    }
   }
 
   &__number {
-    font-size: 50px;
+    font-size: calc(36px + 14 * ((100vw - 320px) / (1200 - 320)));
     @include pf-semi-bold;
     margin-bottom: 16px;
     display: flex;
     flex-grow: 1;
+    @media screen and (min-width: 1200px) {
+      font-size: 50px;
+    }
   }
 
   &__title {
-    font-size: 20px;
+    font-size: calc(16px + 4 * ((100vw - 320px) / (1200 - 320)));
     @include pf-semi-bold;
+    @media screen and (min-width: 1200px) {
+      font-size: 20px;
+    }
   }
 
   &__description {
-    font-size: 14px;
+    font-size: calc(12px + 2 * ((100vw - 320px) / (1200 - 320)));
     margin-top: 10px;
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
   }
 
   &__image {
@@ -50,13 +69,17 @@
       position: absolute;
       left: 0;
       top: 0;
+      transition: transform 0.3s ease;
     }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    padding: 35px;
+    padding: calc(12px + 22 * ((100vw - 320px) / (1200 - 320)));
+    @media screen and (min-width: 1200px) {
+      padding: 34px;
+    }
   }
 
   &__wr {
@@ -69,9 +92,27 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    // max-width: 20vw;
+    width: 290px;
     box-shadow: 0px 4px 64px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
     overflow: hidden;
+    @media screen and (min-width: 520px) {
+      width: 340px;
+    }
+
+    &:hover {
+      .sm-swiper {
+        &__picture {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
 
     &_t2 {
       &.sm-swiper__item {
@@ -81,7 +122,14 @@
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 5px;
-        padding: 34px 34px 40px 34px;
+        box-shadow: none;
+        padding: calc(12px + 22 * ((100vw - 320px) / (1200 - 320)))
+          calc(12px + 22 * ((100vw - 320px) / (1200 - 320)))
+          calc(18px + 22 * ((100vw - 320px) / (1200 - 320)))
+          calc(12px + 22 * ((100vw - 320px) / (1200 - 320)));
+        @media screen and (min-width: 1200px) {
+          padding: 34px 34px 40px 34px;
+        }
 
         &::before {
           content: "";
@@ -107,13 +155,9 @@
     }
 
     &_t3 {
-      padding: 34px;
       border: 1px solid #e6ecf2;
+      box-shadow: none;
 
-      .sm-swiper__info {
-        margin-top: 26px;
-        padding: 0;
-      }
       .sm-swiper__title,
       .sm-swiper__description {
         text-align: center;
@@ -128,18 +172,110 @@
 
   &__btn {
     position: absolute;
-    right: 9.5vw;
     top: 0;
     bottom: 0;
     margin: auto;
-    z-index: 2;
+    z-index: 5;
+
+    &_prev {
+      transform: scale(-1, 1);
+      left: 5px;
+      @media screen and (min-width: 1200px) {
+        left: -35px;
+      }
+    }
+
+    &_next {
+      right: 5px;
+      @media screen and (min-width: 1200px) {
+        right: 14vw;
+      }
+      @media screen and (min-width: 1700px) {
+        right: 15vw;
+      }
+    }
+
+    &.swiper-button-disabled {
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  &_icon {
+    & .sm-swiper {
+      &__image {
+        height: max-content;
+      }
+      &__picture {
+        img {
+          width: 40px;
+          height: 40px;
+          position: static;
+        }
+
+        &::after {
+          content: none;
+        }
+      }
+
+      &__item {
+        padding: 45px 20px 45px 30px;
+        border: 1px solid #e6ecf2;
+        border-radius: 5px;
+        box-shadow: none;
+
+        @media screen and (min-width: 520px) {
+          width: 14vw;
+          min-width: 264px;
+        }
+      }
+
+      &__info {
+        padding: 0;
+        margin-top: 40px;
+      }
+      &__description {
+        font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
+        @media screen and (min-width: 1200px) {
+          font-size: 16px;
+        }
+      }
+    }
   }
 }
 
 .big-swiper {
   width: 100%;
-  padding: 47px 0 57px;
+  padding: 0;
   position: relative;
+  @media screen and (min-width: 1024px) {
+    padding: 47px 0 57px;
+  }
+
+  &_more {
+    .big-swiper {
+      &__item {
+        &:not(:first-child) {
+          .big-swiper__wr {
+            padding: 0 40px;
+            @media screen and (min-width: 1300px) {
+              padding: 0;
+            }
+          }
+        }
+
+        &:last-child {
+          .big-swiper__wr {
+            padding: 0 0 0 40px;
+            @media screen and (min-width: 1300px) {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 
   &::before {
     content: "";
@@ -154,8 +290,13 @@
 
   &__container {
     position: relative;
+    padding: 0;
+    @media screen and (min-width: 1024px) {
+      padding: 15px;
+    }
   }
 
+  &__slider-4,
   &__slider {
     position: relative;
     z-index: 2;
@@ -165,40 +306,81 @@
   &__wr {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    min-height: 480px;
+    padding: 0 15px;
+    @media screen and (min-width: 1024px) {
+      min-height: max-content;
+      position: static;
+      padding: 0;
+    }
   }
 
   &__label {
-    font-size: 16px;
+    font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
     @include pf-semi-bold;
     text-transform: uppercase;
     margin-bottom: 26px;
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+    }
   }
 
   &__ttile {
-    font-size: 30px;
+    font-size: calc(22px + 8 * ((100vw - 320px) / (1200 - 320)));
     @include pf-semi-bold;
+    @media screen and (min-width: 1200px) {
+      font-size: 30px;
+    }
   }
 
   &__decription {
-    font-size: 16px;
+    font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
     margin-top: 22px;
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+    }
   }
 
   &__left {
-    width: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    @media screen and (min-width: 1024px) {
+      width: 45%;
+    }
 
     &:first-child {
-      padding: 47px 0 10px;
+      padding: 47px 40px 10px 0;
     }
   }
 
   &__right {
-    width: 49%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, #0f2035 0%, rgba(47, 69, 96, 0) 100%);
+    opacity: 0.15;
+    @media screen and (min-width: 1024px) {
+      width: 49%;
+      position: static;
+      background: none;
+      opacity: 1;
+    }
   }
 
   &__image {
     position: relative;
     z-index: 1;
+    height: 100%;
+    @media screen and (min-width: 1024px) {
+      height: max-content;
+    }
   }
 
   &__picture {
@@ -206,31 +388,61 @@
     height: 100%;
 
     &::before {
-      content: "";
-      display: block;
-      padding-bottom: 71.3%;
+      @media screen and (min-width: 1024px) {
+        content: "";
+        display: block;
+        padding-bottom: 71.3%;
+      }
     }
 
     img {
-      display: block;
       width: 100%;
       height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      object-fit: contain;
+      object-fit: cover;
       object-position: 50% 50%;
+      @media screen and (min-width: 1024px) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: contain;
+        object-position: 50% 50%;
+      }
     }
   }
 
   // right = padding container - btn width / 2
   &__btn {
     position: absolute;
-    right: -20px;
     top: 0;
     bottom: 0;
     margin: auto;
     z-index: 2;
+
+    &.swiper-button-disabled {
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &_prev {
+      left: 5px;
+      @media screen and (min-width: 1300px) {
+        left: -40px;
+      }
+      @media screen and (min-width: 1350px) {
+        left: -70px;
+      }
+      img {
+        transform: scale(-1, 1);
+      }
+    }
+
+    &_next {
+      right: 5px;
+      @media screen and (min-width: 1300px) {
+        right: -20px;
+      }
+    }
   }
 
   &__pagination {
@@ -242,7 +454,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     .swiper-pagination-bullet {
-      font-size: 16px;
+      font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
       @include pf-semi-bold;
       color: $color-white;
       width: max-content;
@@ -253,6 +465,9 @@
       opacity: 0.3;
       transition: opacity 0.3s ease;
       position: relative;
+      @media screen and (min-width: 1200px) {
+        font-size: 16px;
+      }
 
       &:not(:first-of-type) {
         padding-left: 10px;

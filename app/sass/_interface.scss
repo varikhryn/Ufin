@@ -41,25 +41,33 @@ input {
 }
 
 html {
-  height: 100%;
+  // height: 100%;
   font-size: 16px;
   width: 100%;
   overflow-x: hidden;
+  &._visible {
+    overflow: hidden;
+  }
 }
 
 body {
   @include column-b;
-  font-size: 16px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
   position: relative;
   line-height: 1.2;
   letter-spacing: -0.015em;
   @include pf-regular;
   background-color: $color-white;
   overflow-x: hidden;
-  max-width: 100%;
+  max-width: 1920px;
+  min-width: 320px;
   width: 100%;
   height: 100%;
+  margin: 0 auto;
   color: $color-base;
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
 
 //стили для текстовых страниц
@@ -88,8 +96,20 @@ a:hover {
 }
 
 ul {
-  padding-left: 0;
   list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      content: "•";
+      display: inline-block;
+      font-size: inherit;
+      line-height: inherit;
+      margin: 0 5px;
+    }
+  }
 }
 
 ol {
@@ -116,6 +136,16 @@ ol {
   width: 100%;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  padding: 45px 0;
+  @media screen and (min-width: 768px) {
+    padding: 90px 0;
+  }
 }
 
 img {
@@ -144,6 +174,13 @@ h2 {
     padding: 15px 0;
   }
 
+  h3 {
+    font-size: calc(18px + 6 * ((100vw - 320px) / (1200 - 320)));
+    @media screen and (min-width: 1200px) {
+      font-size: 24px;
+    }
+  }
+
   p {
     padding: 8px 0;
   }
@@ -162,6 +199,10 @@ h2 {
 
   a {
     color: $color-blue;
+  }
+
+  .color-commpany {
+    color: $color-commpany;
   }
 }
 
@@ -224,6 +265,20 @@ h2 {
   }
 }
 
+.logo {
+  img {
+    width: 71px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
 .w-35-65 {
   width: 35%;
 }
@@ -238,4 +293,14 @@ h2 {
 
 .w-70-30 {
   width: 70%;
+}
+
+.label {
+  font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
+  @include pf-semi-bold;
+  margin-bottom: 15px;
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
 }

@@ -115,15 +115,6 @@
 
   &__logo {
     margin: 0 12px 0 0;
-    width: 71px;
-    height: auto;
-    object-fit: contain;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-
-    &:hover {
-      opacity: 0.8;
-    }
 
     &_white {
       display: none;

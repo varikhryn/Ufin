@@ -2,8 +2,18 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 425px;
+  min-height: 425px;
   position: relative;
+  background-position: 70% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 1200px) {
+    background-position: 50% 50%;
+  }
+
+  &:not(.banners_main) {
+    padding: 20px 0;
+  }
 
   &__content {
     width: 100%;
@@ -38,6 +48,8 @@
       background-position: 0 50%;
       background-size: cover;
       background-repeat: no-repeat;
+      display: flex;
+      flex-grow: 1;
 
       &::after,
       &::before {
@@ -68,11 +80,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        min-height: 100%;
       }
 
       .banners__tittle {
-        font-size: 48px;
+        font-size: calc(34px + 14 * ((100vw - 320px) / (1200 - 320)));
+        text-align: center;
+        @media screen and (min-width: 1200px) {
+          font-size: 48px;
+        }
       }
 
       .banners__link {
@@ -101,29 +117,36 @@
     }
   }
 
-  &-white {
-    height: 495px;
-    &::before {
-      content: none;
-    }
-
-    .banners__description {
-      margin-top: 18px;
-    }
-  }
-
   &__container {
     position: relative;
     z-index: 3;
   }
 
   &__wrapper {
-    max-width: 45%;
+    max-width: 100%;
+    padding: 10px 0;
+    @media screen and (min-width: 520px) {
+      max-width: 60%;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 45%;
+    }
   }
 
   &__tittle {
     @include pf-semi-bold;
-    font-size: 36px;
+    font-size: calc(24px + 12 * ((100vw - 320px) / (1200 - 320)));
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+    }
+  }
+
+  &__subtittle {
+    font-size: calc(16px + 4 * ((100vw - 320px) / (1200 - 320)));
+    margin-top: 24px;
+    @media screen and (min-width: 1200px) {
+      font-size: 20px;
+    }
   }
 
   &__description,
@@ -132,11 +155,33 @@
   }
 
   &__description {
-    font-size: 16px;
+    font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+    }
   }
 
   &__link {
     margin-top: 25px;
+  }
+
+  &__list {
+    margin-top: 16px;
+    & .m-list {
+      &__item {
+        &:nth-child(n) {
+          margin: 11px 0;
+        }
+      }
+      &__title {
+        font-size: calc(15px + 4 * ((100vw - 320px) / (1200 - 320)));
+        @include pf-regular;
+        color: $color-white;
+        @media screen and (min-width: 1200px) {
+          font-size: 19px;
+        }
+      }
+    }
   }
 
   &__buttons {
@@ -147,6 +192,32 @@
       &:not(:last-child) {
         margin-right: 17px;
       }
+    }
+  }
+
+  &_big {
+    min-height: 500px;
+    background-position: 50% 50%;
+    @media screen and (min-width: 1200px) {
+      min-height: 640px;
+    }
+
+    .banners__wrapper {
+      max-width: max-content;
+    }
+
+    .banners__link {
+      border-radius: 10px;
+    }
+
+    &::before {
+      background: linear-gradient(
+        274.96deg,
+        #0b253c 30.17%,
+        rgba(11, 37, 60, 0) 103.86%
+      );
+      opacity: 0.8;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
     }
   }
 }

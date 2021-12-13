@@ -1,58 +1,92 @@
 .bnr-person {
+  display: flex;
   width: 100%;
-  min-height: 500px;
-
-  &_mt {
-    padding-top: 100px;
+  @media screen and (min-width: 1200px) {
+    min-height: 500px;
   }
 
-  &_blockquote {
-    .bnr-person__decription {
-      margin-top: 10px;
-    }
+  &_call {
+    .bnr-person {
+      &__big-img {
+        @media screen and (min-width: 768px) {
+          position: relative;
+        }
+        @media screen and (min-width: 1200px) {
+          position: static;
+        }
+      }
+      &__decription {
+        margin-top: 10px;
+      }
 
-    .bnr-person__social {
-      margin-top: 30px;
-    }
+      &__social {
+        margin-top: 30px;
+      }
 
-    .bnr-person__sale {
-      margin-top: 57px;
+      &__sale {
+        font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
+        margin-top: 30px;
+        @media screen and (min-width: 1200px) {
+          font-size: 16px;
+          margin-top: 57px;
+        }
+      }
+    }
+  }
+
+  &_squate {
+    .bnr-person {
+      &__wrapper {
+        color: #1c2024;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background: url("../img/bg-blocksquate-point.svg") 0 0 / contain
+            no-repeat;
+          z-index: 1;
+        }
+      }
+      &__container {
+        flex-direction: row-reverse;
+      }
+
+      &__left {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 15%;
+          right: 0;
+          width: 50%;
+          height: 50%;
+          background: url("../img/bg-blocksquate.svg") 0 0 / contain no-repeat;
+          z-index: 1;
+        }
+      }
     }
   }
 
   &__wrapper {
+    display: flex;
     width: 100%;
-    height: 100%;
     color: $color-white;
+    position: relative;
 
-    &_bg {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background: url("../img/bg-point.svg") 0% 100% / contain no-repeat;
-        z-index: 1;
-      }
-    }
-
-    &_bg-squate {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background: url("../img/bg-blocksquate.svg") 0 0 / contain no-repeat;
-        z-index: 1;
-      }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/bg-point.svg") 0% 100% / contain no-repeat;
+      z-index: 1;
     }
   }
 
@@ -64,25 +98,95 @@
   }
 
   &__left {
-    width: 45%;
-    height: 100%;
+    display: none;
+    @media screen and (min-width: 768px) {
+      width: 25%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-top: -40px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 45%;
+    }
   }
 
   &__big-img {
-    width: 100%;
-    height: 100%;
-    max-height: 600px;
-    display: flex;
-    justify-content: center;
-    margin-top: -100px;
-    position: relative;
-    z-index: 2;
+    @media screen and (min-width: 768px) {
+      width: 83%;
+      height: 100%;
+      max-height: 600px;
+      display: flex;
+      justify-content: center;
+      z-index: 2;
+      margin: auto auto 0 auto;
+    }
+
+    &::before {
+      @media screen and (min-width: 768px) {
+        content: "";
+        display: block;
+        padding-bottom: 117%;
+      }
+    }
 
     img {
+      @media screen and (min-width: 768px) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: 50% 100%;
+      }
+      @media screen and (min-width: 1200px) {
+        object-position: 100% 0;
+      }
+    }
+  }
+
+  &__operator {
+    @media screen and (min-width: 768px) {
+      width: max-content;
+      position: static;
+      left: 0;
+      right: 0;
+      top: 10%;
+      margin: 0 auto 30px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-color: $color-dark-blue;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px 10px 0px 10px;
+      padding: 15px 19px 12px 24px;
+      z-index: 3;
+    }
+    @media screen and (min-width: 1200px) {
+      margin: 30px auto auto 0;
+      position: absolute;
+    }
+
+    &-position {
       width: 100%;
-      height: calc(100% + 100px);
-      object-fit: contain;
-      object-position: 50% 50%;
+      font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
+      text-align: right;
+      color: #527798;
+      @media screen and (min-width: 1200px) {
+        font-size: 16px;
+      }
+    }
+
+    &-name {
+      font-size: calc(16px + 4 * ((100vw - 320px) / (1200 - 320)));
+      text-align: right;
+      color: #ffffff;
+      @media screen and (min-width: 1200px) {
+        font-size: 20px;
+      }
     }
   }
 
@@ -90,14 +194,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 100%;
     position: relative;
     z-index: 5;
+    padding: 30px 0;
+    @media screen and (min-width: 768px) {
+      width: 70%;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 50%;
+    }
   }
 
   &__title {
-    font-size: 30px;
+    font-size: calc(22px + 8 * ((100vw - 320px) / (1200 - 320)));
     @include pf-semi-bold;
+    @media screen and (min-width: 1200px) {
+      font-size: 30px;
+    }
   }
 
   &__decription {
@@ -106,7 +220,10 @@
     }
 
     &_big {
-      font-size: 20px;
+      font-size: calc(16px + 4 * ((100vw - 320px) / (1200 - 320)));
+      @media screen and (min-width: 1200px) {
+        font-size: 20px;
+      }
     }
 
     &_small {
@@ -119,8 +236,38 @@
 
   &__social {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+
+    &-item {
+      min-width: 100%;
+      @media screen and (min-width: 768px) {
+        min-width: max-content;
+      }
+      @media screen and (min-width: 1200px) {
+        min-width: 170px;
+      }
+      &:not(:first-child) {
+        margin-top: 20px;
+        @media screen and (min-width: 768px) {
+          margin-left: 20px;
+          margin-top: 0;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        min-width: max-content;
+      }
+      @media screen and (min-width: 1200px) {
+        min-width: max-content;
+      }
+    }
   }
 
   &__sale {
@@ -134,12 +281,18 @@
   }
 
   &__name {
-    font-size: 16px;
+    font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
     @include pf-semi-bold;
     margin-top: 40px;
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+    }
   }
 
   &__btn {
-    margin-top: 35px;
+    margin-top: 25px;
+    @media screen and (min-width: 1200px) {
+      margin-top: 35px;
+    }
   }
 }
