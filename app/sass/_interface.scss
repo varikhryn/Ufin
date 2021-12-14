@@ -97,19 +97,6 @@ a:hover {
 
 ul {
   list-style: none;
-
-  li {
-    position: relative;
-    padding-left: 15px;
-
-    &::before {
-      content: "•";
-      display: inline-block;
-      font-size: inherit;
-      line-height: inherit;
-      margin: 0 5px;
-    }
-  }
 }
 
 ol {
@@ -146,6 +133,10 @@ ol {
   @media screen and (min-width: 768px) {
     padding: 90px 0;
   }
+
+  & + .section {
+    padding-top: 0;
+  }
 }
 
 img {
@@ -169,9 +160,36 @@ h2 {
 }
 
 .wp-editor {
+  &_center {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      width: 100%;
+      text-align: center;
+    }
+  }
   h2,
   h3 {
     padding: 15px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:only-child {
+      padding: 0;
+    }
+  }
+
+  h2 {
+    font-size: calc(22px + 8 * ((100vw - 320px) / (1200 - 320)));
+    @media screen and (min-width: 1200px) {
+      font-size: 30px;
+    }
   }
 
   h3 {
@@ -183,6 +201,14 @@ h2 {
 
   p {
     padding: 8px 0;
+
+    &:only-child {
+      padding: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   ul {
@@ -191,6 +217,22 @@ h2 {
 
   ol {
     padding: 8px 0;
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding-left: 15px;
+      list-style: none;
+
+      &::before {
+        content: "•";
+        display: inline-block;
+        font-size: inherit;
+        line-height: inherit;
+        margin: 0 5px;
+      }
+    }
   }
 
   b {

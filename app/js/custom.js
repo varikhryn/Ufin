@@ -506,6 +506,7 @@ function setMarginTopHulfHeight() {
   function fix_block(scr_fix_block, scr_value) {
     let window_width = parseInt(window.innerWidth);
     let window_height = parseInt(window.innerHeight);
+    const header = document.querySelector("header");
     for (let index = 0; index < scr_fix_block.length; index++) {
       const block = scr_fix_block[index];
       let block_width = block.getAttribute("data-width");
@@ -515,9 +516,11 @@ function setMarginTopHulfHeight() {
       }
       if (window_width > block_width) {
         if (item.offsetHeight < window_height) {
-          if (scr_value > offset(block).top) {
+          if (scr_value + getElemHeight([header]) > offset(block).top) {
             item.style.cssText =
-              "position:fixed;bottom:unset;top:0;width:" +
+              "position:fixed;bottom:unset;top:" +
+              getElemHeight([header]) +
+              "px;width:" +
               block.offsetWidth +
               "px;left:" +
               offset(block).left +

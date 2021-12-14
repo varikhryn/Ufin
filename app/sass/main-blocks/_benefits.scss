@@ -36,8 +36,12 @@
     }
 
     &.section {
-      &:not(:last-child) {
+      &:last-child {
         padding-bottom: 0;
+      }
+
+      &:first-child {
+        padding-top: 0;
       }
     }
   }
@@ -64,6 +68,10 @@
       h3 {
         padding-top: 0;
       }
+    }
+
+    .label {
+      margin-bottom: 3px;
     }
   }
 

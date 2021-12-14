@@ -12,6 +12,7 @@
 
   ._side-block {
     padding-right: 0;
+    transition: top 0.3s ease;
     @media screen and (max-width: 767px) {
       position: relative !important;
     }
@@ -42,6 +43,7 @@
       color: $color-base;
       font-size: 14px;
       position: relative;
+      z-index: 2;
       display: flex;
       align-items: center;
       padding: 7px 20px;
@@ -71,6 +73,7 @@
         height: 100%;
         background: rgb(255, 255, 255);
         transition: background 0.3s ease;
+        z-index: -1;
       }
 
       &:hover,
@@ -89,6 +92,7 @@
             rgba(27, 127, 109, 0) 98.67%
           );
           opacity: 0.16;
+          z-index: 1;
         }
       }
     }
