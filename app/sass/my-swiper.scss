@@ -1,6 +1,7 @@
 .sm-swiper {
   width: 100%;
   position: relative;
+  padding-right: 15px;
 
   &__wrapper {
     z-index: 1;
@@ -14,10 +15,7 @@
   }
 
   &__slider {
-    position: static;
-    @media screen and (min-width: 520px) {
-      position: relative;
-    }
+    position: relative;
   }
 
   &__btn {

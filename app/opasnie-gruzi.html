@@ -1,0 +1,2293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>UIT</title>
+    <meta name="description" content="HTML template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="header bg-white">
+        <div class="header__container container">
+            <a href="index.html" class="header__logo logo">
+                <img src="./img/logo-black.svg" alt="Ufin" class="header__logo_black">
+                <img src="./img/logo-white.svg" alt="Ufin" class="header__logo_white">
+            </a>
+
+            <div class="header__switch">
+                <div class="btn-switch">
+                    <a href="" class="btn btn-switch__item btn_white _active">Бизнесу</a>
+                    <a href="" class="btn btn-switch__item btn_white">Людям</a>
+                </div>
+            </div>
+
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item arror-dropdown">
+                        <a href="uslugi-kontrolya.html">Услуги контроля</a>
+                    </li>
+
+                    <li class="header__menu-item arror-dropdown">
+                        <a href="#">Решение</a>
+                    </li>
+
+                    <li class="header__menu-item arror-dropdown">
+                        <a href="#">Клиенты</a>
+                    </li>
+
+                    <li class="header__menu-item arror-dropdown">
+                        <a href="#">Ресурсы</a>
+                    </li>
+
+                    <li class="header__menu-item arror-dropdown">
+                        <a href="#">Компания</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="#" class="header__enter">
+                Вход
+            </a>
+
+            <div class="header__price">
+                <a href="#" class="btn btn_green btn_small header__price-link">Узнать цену</a>
+            </div>
+
+            <div class="header__lang drd-lang arror-dropdown">
+                <button href="#" class="drd-lang__current">
+                    RU
+                </button>
+
+                <ul>
+                    <li>
+                        <a href="#">en</a>
+                    </li>
+
+                    <li>
+                        <a href="#">kz</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="header__burger" data-modal-button="mobile-menu">
+                <svg width="30" height="50" viewBox="0 0 100 100">
+                    <path class="line line1"
+                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="line line2" d="M 20,50 H 80" />
+                    <path class="line line3"
+                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <!--HEADER-->
+
+    <!-- modal menu  -->
+    <div class="modal-menu _100vh bg-alice-blue-light">
+        <div class="modal-menu__wrapper pd-header">
+            <div class="modal-menu__container container">
+
+                <!-- Услуги контроля -->
+                <div class="modal-menu__content">
+                    <div class="modal-menu__content-wr">
+
+                        <div class="modal-menu__item modal-menu__item-left w-65-35">
+                            <a href="uslugi-kontrolya.html" class="modal-menu__item-title">Услуги контроля</a>
+
+                            <ul class="m-list">
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <img src="./img/m-1-1.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Обзор платформы
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            IoT платформа Ufin позволяет принимает и обрабатывать большие объемы для
+                                            оказания услуг контроля
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="mestonahojdenie-i-ekspluataciya.html" class="m-list__link">
+                                        <img src="./img/m-1-2.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Местонахождение и эксплуатация
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Самая полная информация о ваших объектах: местонахождение, параметры
+                                            эксплуатации, видеопотоки в онлайне и в записи.
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="voditel.html" class="m-list__link">
+                                        <img src="./img/m-1-3.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Водитель
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Сокращение влияния человеческого фактора на безопасность движения
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <img src="./img/m-1-4.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Бизнес процесс
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Постоянный контроль выполнения основных бизнес задач дает значительное
+                                            повышение
+                                            качества обслуживания
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="pomescheniya.html" class="m-list__link">
+                                        <img src="./img/m-1-5.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Помещения
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Облачный онлайн видеоконтроль помещений дает нашим клиентам полный контроль
+                                            над
+                                            обстановкой в офисе и на производстве
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="modal-menu__item modal-menu__item-right w-35-65">
+                            <div class="modal-menu__item-title">Интеграции</div>
+
+                            <ul class="m-list m-list_column">
+                                <li class="m-list__item">
+                                    <a href="api-dlya-integracii.html" class="m-list__link">
+                                        <img src="./img/m-1-6.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            API для интеграции
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="servera-retranslyacii.html" class="m-list__link">
+                                        <img src="./img/m-1-7.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Сервера ретрансляции
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="sovmestimoe-oborudovanie.html" class="m-list__link">
+                                        <img src="./img/m-1-8.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Совместимое оборудование
+                                        </h5>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Решение -->
+                <div class="modal-menu__content">
+                    <div class="modal-menu__content-wr">
+
+                        <div class="modal-menu__item modal-menu__item-left w-65-35">
+                            <div class="modal-menu__item-title">РЕШЕНИЕ</div>
+
+                            <ul class="m-list">
+                                <li class="m-list__item">
+                                    <a href="effektivnost.html" class="m-list__link">
+                                        <img src="./img/m-2-1.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Эффективность
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Каким образом Ufin повышает эффективность вашего бизнеса
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="uroven-okazaniya-uslug.html" class="m-list__link">
+                                        <img src="./img/m-2-2.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Уровень оказания услуг
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Каким образом можно повысить качество ваших услуг
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="tehnika-bezopasnosti.html" class="m-list__link">
+                                        <img src="./img/m-2-3.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Безопасность перевозок
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Предотвращение аварий и несчастных случаев. Как это работает..
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="kontrol-ugroz.html" class="m-list__link">
+                                        <img src="./img/m-2-4.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Контроль угроз
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Защитите свой бизнес с нашими системами доступа и видеоконтроля
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="loyalnost-i-uderjanie-klientov.html" class="m-list__link">
+                                        <img src="./img/m-2-5.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Лояльность и удержание клиентов
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Счастливый клиент всегда возвращается – давайте поработаем над этим вместе..
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="modal-menu__item modal-menu__item-right w-35-65">
+                            <div class="modal-menu__item-title">ПО ИНДУСТРИИ</div>
+
+                            <ul class="m-list m-list_column">
+                                <li class="m-list__item">
+                                    <a href="perevozka-produktov-pitaniya.html" class="m-list__link">
+                                        <img src="./img/m-2-6.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Перевозка продуктов питания
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="gruzovie-perevozki.html" class="m-list__link">
+                                        <img src="./img/m-2-7.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Грузовые перевозки
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="passajirskie-perevozki.html" class="m-list__link">
+                                        <img src="./img/m-2-8.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Пассажирские перевозки
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="taksi.html" class="m-list__link">
+                                        <img src="./img/m-2-9.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Такси
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="stroitelnaya-tehnika.html" class="m-list__link">
+                                        <img src="./img/m-2-10.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Строительная техника
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="lizing.html" class="m-list__link">
+                                        <img src="./img/m-2-11.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Лизинг
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <img src="./img/m-2-12.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Перевозка опасных грузов
+                                        </h5>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Клиенты -->
+                <div class="modal-menu__content">
+                    <div class="modal-menu__content-wr">
+
+                        <div class="modal-menu__item modal-menu__item-left w-65-35">
+                            <div class="modal-menu__item-title">КЛИЕНТЫ</div>
+
+                            <ul class="m-list">
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <img src="./img/m-3-1.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Обзор
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Каким образом Ufin повышает эффективность вашего бизнеса
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <img src="./img/m-3-2.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Истории успеха
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Каким образом можно повысить качество ваших услуг
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <img src="./img/m-3-3.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Обучение
+                                        </h5>
+
+                                        <p class="m-list__description">
+                                            Предотвращение аварий и несчастных случаев. Как это работает..
+                                        </p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="modal-menu__item modal-menu__item-right w-35-65">
+                            <div class="modal-menu__item-title">ИНТЕРГАЦИИ</div>
+
+                            <ul class="m-list m-list_column">
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <img src="./img/m-3-4.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Интеграции с 1С, SAP
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <img src="./img/m-3-5.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Интеграции с вашими партнерами
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <img src="./img/m-3-6.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Пропуска на въезд
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="sovmestimoe-oborudovanie.html" class="m-list__link">
+                                        <img src="./img/m-3-7.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Совместимое оборудование
+                                        </h5>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Ресурсы -->
+                <div class="modal-menu__content">
+                    <div class="modal-menu__content-wr">
+
+                        <div class="modal-menu__item modal-menu__item-left w-30-70">
+                            <div class="modal-menu__item-title">РЕСУРСЫ</div>
+
+                            <ul class="m-list m-list_column">
+                                <li class="m-list__item">
+                                    <a href="sovmestimoe-oborudovanie.html" class="m-list__link">
+                                        <img src="./img/m-4-1.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Совместимое оборудование
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="polzovatelskoe-soglashenie.html" class="m-list__link">
+                                        <img src="./img/m-4-2.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Пользовательское соглашение
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="politika-konfidencialnosti" class="m-list__link">
+                                        <img src="./img/m-4-3.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Политика конфиденциальности
+                                        </h5>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="modal-menu__item modal-menu__item-right w-70-30">
+                            <a href="novosti.html" class="modal-menu__item-title">НОВОСТИ</a>
+
+                            <ul class="m-list m-list_news">
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <picture class="m-list__picture">
+                                            <img src="./img/header-new-1.png" alt="">
+                                        </picture>
+                                        <h5 class="m-list__title">
+                                            Контроль местонахождения и эксплуатации
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <picture class="m-list__picture">
+                                            <img src="./img/header-new-1.png" alt="">
+                                        </picture>
+                                        <h5 class="m-list__title">
+                                            Контроль местонахождения и эксплуатации
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <picture class="m-list__picture">
+                                            <img src="./img/header-new-1.png" alt="">
+                                        </picture>
+                                        <h5 class="m-list__title">
+                                            Контроль местонахождения и эксплуатации
+                                        </h5>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Компания -->
+                <div class="modal-menu__content">
+                    <div class="modal-menu__content-wr">
+
+                        <div class="modal-menu__item modal-menu__item-left w-30-70">
+                            <div class="modal-menu__item-title">РЕСУРСЫ</div>
+
+                            <ul class="m-list m-list_column">
+                                <li class="m-list__item">
+                                    <a href="o-kompanii.html" class="m-list__link">
+                                        <img src="./img/m-5-1.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            О компании
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="partneram.html" class="m-list__link">
+                                        <img src="./img/m-5-2.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Партнерам
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="novosti.html" class="m-list__link">
+                                        <img src="./img/m-5-3.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Новости
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <img src="./img/m-5-4.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Карьера
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="kontakti.html" class="m-list__link">
+                                        <img src="./img/m-5-5.svg" alt="" class="m-list__image">
+                                        <h5 class="m-list__title">
+                                            Контакты
+                                        </h5>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="modal-menu__item modal-menu__item-right w-70-30">
+                            <a href="novosti.html" class="modal-menu__item-title">НОВОСТИ</a>
+
+                            <ul class="m-list m-list_news">
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <picture class="m-list__picture">
+                                            <img src="./img/header-new-1.png" alt="">
+                                        </picture>
+                                        <h5 class="m-list__title">
+                                            Контроль местонахождения и эксплуатации
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <picture class="m-list__picture">
+                                            <img src="./img/header-new-1.png" alt="">
+                                        </picture>
+                                        <h5 class="m-list__title">
+                                            Контроль местонахождения и эксплуатации
+                                        </h5>
+                                    </a>
+                                </li>
+
+                                <li class="m-list__item">
+                                    <a href="#" class="m-list__link">
+                                        <picture class="m-list__picture">
+                                            <img src="./img/header-new-1.png" alt="">
+                                        </picture>
+                                        <h5 class="m-list__title">
+                                            Контроль местонахождения и эксплуатации
+                                        </h5>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal _100vh modal_mobile-menu" id="mobile-menu" data-modal>
+        <div class="modal__body pd-header">
+            <div class="modal__content container">
+
+                <!--ACCORDION-->
+                <div class="accordion accordion_mobile-menu">
+                    <div class="accordion__container">
+
+                        <!-- Услуги контроля -->
+                        <div class="accordion__item">
+                            <div class="accordion__item-trigger">
+                                <a href="#" class="accordion__item-trigger-text">
+                                    Услуги контроля
+                                </a>
+
+                                <button class="accordion__item-trigger-btn">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                            fill="#0b253c" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="accordion__item-content">
+                                <ul class="m-list m-list_column m-list_mobile-menu">
+                                    <li class="m-list__item">
+                                        <a href="#" class="m-list__link">
+                                            <img src="./img/m-1-1.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Обзор платформы
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="mestonahojdenie-i-ekspluataciya.html" class="m-list__link">
+                                            <img src="./img/m-1-2.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Местонахождение и эксплуатация
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="voditel.html" class="m-list__link">
+                                            <img src="./img/m-1-3.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Водитель
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="#" class="m-list__link">
+                                            <img src="./img/m-1-4.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Бизнес процесс
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="pomescheniya.html" class="m-list__link">
+                                            <img src="./img/m-1-5.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Помещения
+                                            </h5>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <h5 class="accordion__item-content-title">Интеграции</h5>
+
+                                <ul class="m-list m-list_column m-list_mobile-menu">
+                                    <li class="m-list__item">
+                                        <a href="api-dlya-integracii.html" class="m-list__link">
+                                            <img src="./img/m-1-5.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                API для интеграции
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="servera-retranslyacii.html" class="m-list__link">
+                                            <img src="./img/m-1-6.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Сервера ретрансляции
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="sovmestimoe-oborudovanie.html" class="m-list__link">
+                                            <img src="./img/m-1-7.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Совместимое оборудование
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Решение -->
+                        <div class="accordion__item">
+                            <div class="accordion__item-trigger">
+                                <a href="#" class="accordion__item-trigger-text">
+                                    Решение
+                                </a>
+
+                                <button class="accordion__item-trigger-btn">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                            fill="#0b253c" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                            <div class="accordion__item-content">
+                                <ul class="m-list m-list_column m-list_mobile-menu">
+                                    <li class="m-list__item">
+                                        <a href="effektivnost.html" class="m-list__link">
+                                            <img src="./img/m-2-1.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Эффективность
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="uroven-okazaniya-uslug.html" class="m-list__link">
+                                            <img src="./img/m-2-2.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Уровень оказания услуг
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="tehnika-bezopasnosti.html" class="m-list__link">
+                                            <img src="./img/m-2-3.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Безопасность перевозок
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="kontrol-ugroz.html" class="m-list__link">
+                                            <img src="./img/m-2-4.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Контроль угроз
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="loyalnost-i-uderjanie-klientov.html" class="m-list__link">
+                                            <img src="./img/m-2-5.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Лояльность и удержание клиентов
+                                            </h5>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <h5 class="accordion__item-content-title">ПО ИНДУСТРИИ</h5>
+
+                                <ul class="m-list m-list_column m-list_mobile-menu">
+                                    <li class="m-list__item">
+                                        <a href="perevozka-produktov-pitaniya.html" class="m-list__link">
+                                            <img src="./img/m-2-6.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Перевозка продуктов питания
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="gruzovie-perevozki.html" class="m-list__link">
+                                            <img src="./img/m-2-7.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Грузовые перевозки
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="passajirskie-perevozki.html" class="m-list__link">
+                                            <img src="./img/m-2-8.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Пассажирские перевозки
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="taksi.html" class="m-list__link">
+                                            <img src="./img/m-2-9.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Такси
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="stroitelnaya-tehnika.html" class="m-list__link">
+                                            <img src="./img/m-2-10.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Строительная техника
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="lizing.html" class="m-list__link">
+                                            <img src="./img/m-2-11.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Лизинг
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="#" class="m-list__link">
+                                            <img src="./img/m-2-12.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Перевозка опасных грузов
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Клиенты -->
+                        <div class="accordion__item">
+                            <div class="accordion__item-trigger">
+                                <a href="#" class="accordion__item-trigger-text">
+                                    Клиенты
+                                </a>
+
+                                <button class="accordion__item-trigger-btn">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                            fill="#0b253c" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="accordion__item-content">
+                                <ul class="m-list m-list_column m-list_mobile-menu">
+                                    <li class="m-list__item">
+                                        <a href="#" class="m-list__link">
+                                            <img src="./img/m-3-1.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Обзор
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="#" class="m-list__link">
+                                            <img src="./img/m-3-2.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Истории успеха
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="#" class="m-list__link">
+                                            <img src="./img/m-3-3.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Обучение
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                                <h5 class="accordion__item-content-title">Интеграция</h5>
+
+                                <ul class="m-list m-list_column m-list_mobile-menu">
+                                    <li class="m-list__item">
+                                        <a href="#" class="m-list__link">
+                                            <img src="./img/m-3-4.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Интеграции с 1С, SAP
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="#" class="m-list__link">
+                                            <img src="./img/m-3-5.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Интеграции с вашими партнерами
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="#" class="m-list__link">
+                                            <img src="./img/m-3-6.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Пропуска на въезд
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="sovmestimoe-oborudovanie.html" class="m-list__link">
+                                            <img src="./img/m-3-7.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Совместимое оборудование
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Ресурсы -->
+                        <div class="accordion__item">
+                            <div class="accordion__item-trigger">
+                                <a href="#" class="accordion__item-trigger-text">
+                                    Ресурсы
+                                </a>
+
+                                <button class="accordion__item-trigger-btn">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                            fill="#0b253c" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="accordion__item-content">
+                                <ul class="m-list m-list_column m-list_mobile-menu">
+                                    <li class="m-list__item">
+                                        <a href="sovmestimoe-oborudovanie.html" class="m-list__link">
+                                            <img src="./img/m-4-1.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Совместимое оборудование
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="polzovatelskoe-soglashenie.html" class="m-list__link">
+                                            <img src="./img/m-4-2.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Пользовательское соглашение
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="politika-konfidencialnosti" class="m-list__link">
+                                            <img src="./img/m-4-3.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Политика конфиденциальности
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <!-- Компания -->
+                        <div class="accordion__item">
+                            <div class="accordion__item-trigger">
+                                <a href="#" class="accordion__item-trigger-text">
+                                    Компания
+                                </a>
+
+                                <button class="accordion__item-trigger-btn">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                            fill="#0b253c" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="accordion__item-content">
+                                <ul class="m-list m-list_column m-list_mobile-menu">
+                                    <li class="m-list__item">
+                                        <a href="o-kompanii.html" class="m-list__link">
+                                            <img src="./img/m-5-1.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                О компании
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="partneram.html" class="m-list__link">
+                                            <img src="./img/m-5-2.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Партнерам
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="novosti.html" class="m-list__link">
+                                            <img src="./img/m-5-3.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Новости
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="#" class="m-list__link">
+                                            <img src="./img/m-5-4.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Карьера
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                    <li class="m-list__item">
+                                        <a href="kontakti.html" class="m-list__link">
+                                            <img src="./img/m-5-5.svg" alt="" class="m-list__image">
+                                            <h5 class="m-list__title">
+                                                Контакты
+                                            </h5>
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- buttons -->
+                <div class="modal__buttons container">
+                    <a href="#" class="btn btn_white modal__buttons-item">Вход</a>
+                    <a href="#" class="btn btn_green btn_small modal__buttons-item">Узнать цену</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- banner -->
+        <section class="banners banners_big color-white banners_form half-height">
+            <div class="banners__inner half-height-pb-all" style="background-image: url('./img/banner-big-1.png');">
+
+                <div class="banners__container container">
+                    <div class="banners__wrapper">
+                        <h2 class="banners__tittle">
+                            Контроль водителей
+                        </h2>
+
+                        <h2 class="banners__subtittle">
+                            Что вы получите:
+                        </h2>
+
+                        <ul class="banners__list m-list m-list_column color-white">
+                            <li class="m-list__item">
+                                <img src="./img/done.svg" alt="" class="m-list__image">
+                                <h5 class="m-list__title">
+                                    API для интеграции
+                                </h5>
+                            </li>
+
+                            <li class="m-list__item">
+                                <img src="./img/done.svg" alt="" class="m-list__image">
+                                <h5 class="m-list__title">
+                                    Сервера ретрансляции
+                                </h5>
+                            </li>
+
+                            <li class="m-list__item">
+                                <img src="./img/done.svg" alt="" class="m-list__image">
+                                <h5 class="m-list__title">
+                                    Совместимое оборудование
+                                </h5>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn_base-gradient btn_biggest banners__link">
+                            Закажи тест - драйв UFin прямо сейчас!
+                            <img src="./img/arrow-right.svg" alt="go">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="banners__feedback-container container  half-height-mt">
+
+
+                <div class="feedback feedback_row bg-white color-base">
+
+
+                    <div class="feedback__item">
+
+                        <h3 class="feedback__title">
+                            Оставить заявку
+                        </h3>
+
+                        <p class="feedback__description">
+                            Получите <span>скидку 10%</span> на первый заказ
+                        </p>
+                    </div>
+
+                    <form action="" class="feedback__item feedback__item_form form form_row">
+                        <div class="form__item">
+                            <input type="text" placeholder="Имя">
+                        </div>
+
+                        <div class="form__item">
+                            <input type="text" class="js-mask-phone" placeholder="">
+                        </div>
+
+                        <div class="form__item">
+                            <input type="submit" value="Коммерчиское предложение">
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- card -->
+        <section class="main-card section">
+            <div class="main-card__container container card card_icon">
+                <div class="main-card__wrapper">
+
+                    <!-- 1 -->
+                    <div class="card__item card__item_bg card__item_medium swiper-slide bg-white">
+                        <div class="card__image">
+                            <picure class="card__picture">
+                                <img src="./img/icon-6.svg" alt="City of Boston">
+                            </picure>
+
+                            <div class="card__image-title">
+                                <p class="card__image-text">
+                                    СООТВЕСТВИЕ
+                                </p>
+
+                                <p class="card__image-text">
+                                    нормативам
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="card__info card__info_small">
+                            <p class="card__description card__description_small color-base">
+                                Избегайте любых возможных проблем с контролирующими органами
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2  -->
+                    <div class="card__item card__item_bg card__item_medium swiper-slide bg-white">
+                        <div class="card__image">
+                            <picure class="card__picture">
+                                <img src="./img/icon-7.svg" alt="City of Boston">
+                            </picure>
+
+                            <div class="card__image-title">
+                                <p class="card__image-text">
+                                    Повышение
+                                </p>
+
+                                <p class="card__image-text">
+                                    ПРОИЗВОДИТЕЛЬНОСТИ
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="card__info card__info_small">
+                            <p class="card__description card__description_small color-base">
+                                Оптимизируйте расходы на топливо и шины
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="card__item card__item_bg card__item_medium swiper-slide bg-white">
+                        <div class="card__image">
+                            <picure class="card__picture">
+                                <img src="./img/icon-8.svg" alt="City of Boston">
+                            </picure>
+
+                            <div class="card__image-title">
+                                <p class="card__image-text">
+                                    Обеспечьте
+                                </p>
+
+                                <p class="card__image-text">
+                                    БЕЗОПАСНОСТЬ
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="card__info card__info_small">
+                            <p class="card__description card__description_small color-base">
+                                Видеоконтроль движения как водителем, так и диспетчером
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="card__item card__item_bg card__item_medium swiper-slide bg-white">
+                        <div class="card__image">
+                            <picure class="card__picture">
+                                <img src="./img/icon-9.svg" alt="City of Boston">
+                            </picure>
+
+                            <div class="card__image-title">
+                                <p class="card__image-text">
+                                    Доставляйте
+                                </p>
+
+                                <p class="card__image-text">
+                                    ВОВРЕМЯ
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="card__info card__info_small">
+                            <p class="card__description card__description_small color-base">
+                                Автоматически контролируйте выполнение маршрутных заданий
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- benefist  -->
+        <section class="benefits section benefits_reverse">
+            <div class="benefits__container benefits__container container">
+
+                <!-- 1  -->
+                <div class="benefits__row section wp-editor">
+
+                    <div class="benefits__item">
+                        <picture class="benefits__picture">
+                            <img src="./img/benefist-danger-1.png" alt="">
+                        </picture>
+                    </div>
+
+                    <div class="benefits__item">
+
+                        <h3>
+                            Делаем перевозку опасных грузов безопасной
+                        </h3>
+
+                        <p>
+                            Под опасным грузом понимается перевозка веществ, которые могут нанести вред при
+                            разгерметизации упаковок, при аварии или случайном пролитии/высыпании: водителю, другим
+                            людям, природе. Перевозка опасных грузов регулируется международным соглашением (ДОПОГ) и
+                            российскими правилами перевозки опасных грузов автотранспортом (ПОГАТ).
+                        </p>
+
+                        <p>
+                            Ufin выполняет оснащение транспортных средств перевозящих опасные грузы только оборудование
+                            сертифицированным под ПП РФ № 969 в соответствии с паспортом безопасности транспортного
+                            средства оформленным согласно ПП РФ №1640 в сервисных центрах и с выездом к вам.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- 2  -->
+                <div class="benefits__row section wp-editor">
+
+                    <div class="benefits__item">
+                        <picture class="benefits__picture">
+                            <img src="./img/benefist-danger-2.png" alt="">
+                        </picture>
+                    </div>
+
+                    <div class="benefits__item">
+
+                        <h3>
+                            Соответвтствие нормативам
+                        </h3>
+
+                        <p>
+                            При перевозке пассажиров и опасных грузов перевозчики должны руководствоваться следующими
+                            Законами и Постановлениями Правительства РФ:
+                        </p>
+
+                        <ul>
+                            <li>
+                                № 16-ФЗ от 09.02.2007 г. «О транспортной безопасности».
+                            </li>
+
+                            <li>
+                                ПП РФ № 924 от 14.09.2016 г. «Об утверждении требований по обеспечению транспортной
+                                безопасности».
+                            </li>
+
+                            <li>
+                                ПП РФ № 969 от 26.09.2016 г. «Об утверждении требований к функциональным свойствам
+                                технических средств обеспечения транспортной безопасности и Правил обязательной
+                                сертификации технических средств обеспечения транспортной безопасности»
+                            </li>
+
+                            <li>
+                                ПП РФ от 8 октября 2020 г. № 1640 «Об утверждении требований по обеспечению транспортной
+                                безопасности, учитывающих уровни безопасности для транспортных средств автомобильного
+                                транспорта и городского наземного электрического транспорта».
+                            </li>
+
+                        </ul>
+
+                        <p>
+                            Нарушение установленных правил грозит существенными штрафами как заказчику перевозки, так и
+                            исполнителю.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- rybric  -->
+        <section class="prewiew-rybric color-white">
+            <div class="prewiew-rybric__item prewiew-rybric__item_left _pdd-left"
+                style="background-image: url('./img/prewiew-rybric-left.png');">
+                <div class="prewiew-rybric__content">
+                    <p class="prewiew-rybric__label">
+                        ВСЕ РУБРИКИ
+                    </p>
+
+                    <h2 class="prewiew-rybric__title">
+                        Контроль маршрутов движения и эксплуатации
+                    </h2>
+
+                    <a href="#" class="btn btn_green btn_big prewiew-rybric__link">Узнать больше</a>
+                </div>
+            </div>
+
+            <div class="prewiew-rybric__item prewiew-rybric__item_right _pdd-right"
+                style="background-image: url('./img/prewiew-rybric-right.png');">
+                <div class="prewiew-rybric__content">
+                    <p class="prewiew-rybric__label">
+                        ВСЕ РУБРИКИ
+                    </p>
+
+                    <h2 class="prewiew-rybric__title">
+                        Контроль водителя
+                    </h2>
+
+                    <p class="prewiew-rybric__description">
+                        От более умных видеорегистраторов до дополнительных телематических функций для электромобилей -
+                        менеджеры автопарков могут ожидать больших изменений по мере появления новых технологий в
+                        ближайшее десятилетие.
+                    </p>
+
+                    <a href="#" class="btn btn_green btn_big prewiew-rybric__link">Узнать больше</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- banner person bottom footer  -->
+        <section class="bnr-person bnr-person_squate">
+            <div class="bnr-person__wrapper bg-alice-blue bg bg_point">
+                <div class="bnr-person__container container">
+                    <div class="bnr-person__left bg bg_squate">
+                        <picture class="bnr-person__big-img">
+                            <img src="./img/bnr-person.png" alt="person">
+                        </picture>
+                    </div>
+
+                    <div class="bnr-person__right">
+                        <p class="bnr-person__decription bnr-person__decription_big">
+                            Если мой генератор или экскаватор-погрузчик находится не там, где он должен быть, и мне
+                            нужно его найти, мне нужно всего два щелчка мышки, чтобы отследить свои машины.
+                        </p>
+
+                        <p class="bnr-person__name color-commpany">
+                            Виктор Демченко
+                        </p>
+
+                        <p class="bnr-person__decription_small">
+                            Менеджер по обслуживанию, Ghilotti Bros.
+                        </p>
+
+                        <a href="#" class="btn btn_green btn_big bnr-person__btn">Узнать цену</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- review -->
+        <section class="big-review section_big bg-base color-white">
+            <div class="big-review__container container">
+
+                <div class="big-review__item big-review__item_left">
+                    <picture class="big-review__picture">
+                        <img src="./img/big-review-1.png" alt="review">
+                    </picture>
+                </div>
+
+                <div class="big-review__item big-review__item_right">
+                    <p class="big-review__description">
+                        C Ufin мы становимся лучше каждый день. Больше цифровых решений контроля и управления и меньше
+                        рутинной работы.
+                    </p>
+
+                    <p class="label big-review__label color-commpany">
+                        Дж.С. Ядау
+                    </p>
+
+                    <p class="big-review__name">
+                        Группа компаний sts logistics
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- slider 3 -->
+        <section class="sm-swiper section">
+            <div class="sm-swiper__container _pdd-left">
+
+                <div class="main-info wp-editor wp-editor_medium">
+                    <div class="main-info__container ">
+                        <h2>
+                            Широкий спектр используемого оборудования
+                        </h2>
+
+                        <p>
+                            Ufin глубоко интегрирован со всеми основными устройствами контроля ведущих мировых
+                            производителей, список моделей и протоколов постоянно расширяется.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="swiper sm-swiper__slider">
+                    <div class="card card_product swiper-wrapper sm-swiper__wrapper">
+
+                        <a href="#" class="card__item swiper-slide">
+                            <div class="card__image">
+                                <picure class="card__picture">
+                                    <img src="./img/sldr-t3-1.png" alt="ANYWHERE TK106">
+                                </picure>
+                            </div>
+
+                            <div class="card__info">
+                                <h4 class="card__title color-base">ANYWHERE TK106</h4>
+                                <p class="card__description color-grey">
+                                    AI DASH CAMS HD-камеры с подключением к облаку и компьютерным зрением
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="card__item swiper-slide bg-white">
+                            <div class="card__image">
+                                <picure class="card__picture">
+                                    <img src="./img/sldr-t3-2.png" alt="ANYWHERE TK108">
+                                </picure>
+                            </div>
+
+                            <div class="card__info">
+                                <h4 class="card__title color-base">ANYWHERE TK108</h4>
+                                <p class="card__description color-grey">
+                                    AI DASH CAMS HD-камеры с подключением к облаку и компьютерным зрением
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="card__item swiper-slide bg-white card__item_t3">
+                            <div class="card__image">
+                                <picure class="card__picture">
+                                    <img src="./img/sldr-t3-3.png" alt="ARNAVI">
+                                </picure>
+                            </div>
+
+                            <div class="card__info">
+                                <h4 class="card__title color-base">ARNAVI</h4>
+                                <p class="card__description color-grey">
+                                    AI DASH CAMS HD-камеры с подключением к облаку и компьютерным зрением
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="card__item swiper-slide bg-white">
+                            <div class="card__image">
+                                <picure class="card__picture">
+                                    <img src="./img/sldr-t3-4.png" alt="ANYWHERE TK108">
+                                </picure>
+                            </div>
+
+                            <div class="card__info">
+                                <h4 class="card__title color-base">ANYWHERE TK108</h4>
+                                <p class="card__description color-grey">
+                                    AI DASH CAMS HD-камеры с подключением к облаку и компьютерным зрением
+                                </p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <button class="btn btn_cirle btn_cirle-green sm-swiper__btn sm-swiper__btn_prev">
+                        <img src="./img/arrow-right.svg" alt="arrow-right">
+                    </button>
+
+                    <button class="btn btn_cirle btn_cirle-green sm-swiper__btn sm-swiper__btn_next">
+                        <img src="./img/arrow-right.svg" alt="arrow-right">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- banner person bottom footer  -->
+        <section class="bnr-person bnr-person_call">
+            <div class="bnr-person__wrapper bg bg_point-opacity bg-dark-blue">
+                <div class="bnr-person__container container">
+                    <div class="bnr-person__left">
+                        <picture class="bnr-person__big-img">
+                            <img src="./img/call-girls.png" alt="person">
+                        </picture>
+
+                        <div class="bnr-person__operator">
+
+                            <p class="bnr-person__operator-position">
+                                Ген. директор
+                            </p>
+
+                            <p class="bnr-person__operator-name">
+                                Алексей Осипов
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="bnr-person__right">
+                        <h3 class="bnr-person__title">Свяжитесь с нами</h3>
+                        <p class="bnr-person__decription bnr-person__decription_opacity">
+                            Получите подробную информацию и консультация!
+                        </p>
+                        <div class="bnr-person__social">
+                            <a href="#"
+                                class="btn btn_with-icon btn_meidum color-blue bg-white bnr-person__social-item">
+                                <picture class="btn_with-icon__picture">
+                                    <img src="./img/telegram-blue.svg" alt="play">
+                                </picture>
+                                <span>Чат в Telegram</span>
+                            </a>
+
+                            <a href="#"
+                                class="btn btn_with-icon btn_meidum color-blue bg-white bnr-person__social-item">
+                                <picture class="btn_with-icon__picture">
+                                    <img src="./img/viber.svg" alt="play">
+                                </picture>
+                                <span>Чат в Viber</span>
+                            </a>
+
+                            <a href="#"
+                                class="btn btn_with-icon btn_meidum color-blue bg-white bnr-person__social-item">
+                                <picture class="btn_with-icon__picture">
+                                    <img src="./img/whats-app.svg" alt="play">
+                                </picture>
+                                <span>Чат в WhatApp</span>
+                            </a>
+                        </div>
+
+                        <p class="bnr-person__sale bg-orange">
+                            АКЦИЯ!
+                        </p>
+
+                        <p class="bnr-person__decription bnr-person__decription_sale bnr-person__decription_mt-10">
+                            Оставьте онлайн заявку сейчас! Мы с вами свяжемся в рабочее время
+                            и дадим 10% скидки если начнем сотрудничать
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- MAIN -->
+
+    <!--FOOTER-->
+    <footer class="footer bg-base ">
+        <div class="footer__container container">
+            <div class="footer__top">
+
+                <div class="footer__info">
+                    <a href="index.html" class="footer__logo logo">
+                        <img src="./img/logo-white.svg" alt="Ufin">
+                    </a>
+
+                    <div class="footer__switch btn-switch">
+                        <a href="" class="btn btn-switch__item btn_white _active">Бизнесу</a>
+                        <a href="" class="btn btn-switch__item btn_base">Людям</a>
+                    </div>
+
+                    <div class="footer__contact">
+                        <a href="#" class="footer__contact-item footer__contact-link">
+                            Москва, ул. Лётчика <br>Бабушкина, д. 1, корпус, 3
+                        </a>
+
+                        <a href="tel: 84959845350" class="footer__contact-item footer__contact-link">
+                            8 (495) 984-53-50
+                        </a>
+
+                        <p class="footer__contact-item">
+                            Свидетельство ПО <br>№2016613902 от 11.04.2016
+                        </p>
+
+                        <p class="footer__contact-item">
+                            Лицензия Роскомнадзора <br>№157519 от 04.08.2017
+                        </p>
+
+                    </div>
+
+                    <div class="footer__social social">
+                        <a href="#" class="footer__social-link social__link">
+                            <img src="./img/facebook.svg" alt="#" class="footer__social-image">
+                        </a>
+
+                        <a href="#" class="footer__social-link social__link">
+                            <img src="./img/instagram.svg" alt="#" class="footer__social-image">
+                        </a>
+
+                        <a href="#" class="footer__social-link social__link">
+                            <img src="./img/telegram.svg" alt="#" class="footer__social-image">
+                        </a>
+
+                        <a href="#" class="footer__social-link social__link">
+                            <img src="./img/youtube.svg" alt="#" class="footer__social-image">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__menu">
+
+                    <!-- left -->
+                    <div class="footer__menu-item ">
+
+                        <!-- Услуги контроля -->
+                        <div class="accordion accordion_mobile-menu">
+                            <div class="accordion__item">
+                                <div class="accordion__item-trigger">
+                                    <a href="uslugi-kontrolya.html" class="accordion__item-trigger-text">
+                                        Услуги контроля
+                                    </a>
+
+                                    <button class="accordion__item-trigger-btn">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                                fill="#0b253c" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="accordion__item-content">
+
+                                    <ul class="m-list m-list_column">
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Обзор платформы
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="mestonahojdenie-i-ekspluataciya.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Местонахождение и эксплуатация
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="voditel.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Водитель
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Бизнес процесс
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="pomescheniya.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Помещения
+                                                </h5>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Интеграции -->
+                        <div class="accordion accordion_mobile-menu">
+                            <div class="accordion__item">
+                                <div class="accordion__item-trigger">
+                                    <a href="#" class="accordion__item-trigger-text">
+                                        Интеграции
+                                    </a>
+
+                                    <button class="accordion__item-trigger-btn">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                                fill="#0b253c" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="accordion__item-content">
+
+                                    <ul class="m-list m-list_column">
+
+                                        <li class="m-list__item">
+                                            <a href="api-dlya-integracii.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    API для интеграции
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="servera-retranslyacii.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Сервера ретрансляции
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="sovmestimoe-oborudovanie.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Совместимое оборудование
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Интеграции с 1С, SAP
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Интеграции с вашими
+                                                    партнерами
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Пропуска на въезд
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="sovmestimoe-oborudovanie.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Совместимое оборудование
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- center -->
+                    <div class="footer__menu-item">
+
+                        <!-- Потребности -->
+                        <div class="accordion accordion_mobile-menu">
+                            <div class="accordion__item">
+                                <div class="accordion__item-trigger">
+                                    <a href="#" class="accordion__item-trigger-text">
+                                        Потребности
+                                    </a>
+
+                                    <button class="accordion__item-trigger-btn">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                                fill="#0b253c" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="accordion__item-content">
+
+                                    <ul class="m-list m-list_column">
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Обзор платформы
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="effektivnost.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Эффективность
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="uroven-okazaniya-uslug.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Уровень оказания услуг
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Безопасность
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="kontrol-ugroz.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Контроль угроз
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="loyalnost-i-uderjanie-klientov.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Лояльность и удержание клиентов
+                                                </h5>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Интеграции -->
+                        <div class="accordion accordion_mobile-menu">
+                            <div class="accordion__item">
+                                <div class="accordion__item-trigger">
+                                    <a href="#" class="accordion__item-trigger-text">
+                                        Отрасли
+                                    </a>
+
+                                    <button class="accordion__item-trigger-btn">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                                fill="#0b253c" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="accordion__item-content">
+
+                                    <ul class="m-list m-list_column">
+
+                                        <li class="m-list__item">
+                                            <a href="perevozka-produktov-pitaniya.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Перевозка продуктов питания
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="gruzovie-perevozki.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Грузовые перевозки
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="passajirskie-perevozki.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Пассажирские перевозки
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="taksi.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Такси
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="stroitelnaya-tehnika.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Строительная техника
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="lizing.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Лизинг
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="opasnie-gruzi.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Опасные грузы
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- right -->
+                    <div class="footer__menu-item">
+
+                        <!-- Потребности -->
+                        <div class="accordion accordion_mobile-menu">
+                            <div class="accordion__item">
+                                <div class="accordion__item-trigger">
+                                    <a href="#" class="accordion__item-trigger-text">
+                                        Успех клиента
+                                    </a>
+
+                                    <button class="accordion__item-trigger-btn">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                                fill="#0b253c" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="accordion__item-content">
+
+                                    <ul class="m-list m-list_column">
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Обзор
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Истории успеха
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Обучение
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Ресурсы -->
+                        <div class="accordion accordion_mobile-menu">
+                            <div class="accordion__item">
+                                <div class="accordion__item-trigger">
+                                    <a href="#" class="accordion__item-trigger-text">
+                                        Ресурсы
+                                    </a>
+
+                                    <button class="accordion__item-trigger-btn">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                                fill="#0b253c" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="accordion__item-content">
+
+                                    <ul class="m-list m-list_column">
+                                        <li class="m-list__item">
+                                            <a href="sovmestimoe-oborudovanie.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Совместимое оборудование
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="polzovatelskoe-soglashenie.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Пользовательское соглашение
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="politika-konfidencialnosti" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Политика конфиденциальности
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="voprosi-i-otveti" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Вопросы – ответы
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Компания -->
+                        <div class="accordion accordion_mobile-menu">
+                            <div class="accordion__item">
+                                <div class="accordion__item-trigger">
+                                    <a href="#" class="accordion__item-trigger-text">
+                                        Компания
+                                    </a>
+
+                                    <button class="accordion__item-trigger-btn">
+                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.03033 5.96967L4.5 5.43934L3.43934 6.5L3.96967 7.03033L5.03033 5.96967ZM7.5 9.5L6.96967 10.0303L7.5 10.5607L8.03033 10.0303L7.5 9.5ZM11.0303 7.03033L11.5607 6.5L10.5 5.43934L9.96967 5.96967L11.0303 7.03033ZM3.96967 7.03033L6.96967 10.0303L8.03033 8.96967L5.03033 5.96967L3.96967 7.03033ZM8.03033 10.0303L11.0303 7.03033L9.96967 5.96967L6.96967 8.96967L8.03033 10.0303Z"
+                                                fill="#0b253c" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="accordion__item-content">
+
+                                    <ul class="m-list m-list_column">
+
+                                        <li class="m-list__item">
+                                            <a href="o-kompanii.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    О компании
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="partneram.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Партнерам
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="novosti.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Новости
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="#" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Карьера
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                        <li class="m-list__item">
+                                            <a href="kontakti.html" class="m-list__link">
+                                                <h5 class="m-list__title">
+                                                    Контакты
+                                                </h5>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+
+                <div class="footer__legal">
+                    <p class="footer__legal-text color-white">
+                        © Система онлайн мониторинга Ufin 2020
+                    </p>
+
+                    <nav class="footer__legal-menu lists lists_line">
+                        <ul class="lists__items color-white">
+                            <li class="lists__item">
+                                <a href="#">
+                                    Privacy Policy
+                                </a>
+                            </li>
+
+                            <li class="lists__item">
+                                <a href="#">
+                                    Candidate Privacy Notice
+                                </a>
+                            </li>
+
+                            <li class="lists__item">
+                                <a href="#">
+                                    Website Terms of Service
+                                </a>
+                            </li>
+
+                            <li class="lists__item">
+                                <a href="#">
+                                    Cookie Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__apps lists lists_image">
+                    <ul class="lists__items color-white">
+                        <li class="lists__item">
+                            <a href="#" class="lists__link">
+                                <img class="lists__link-image" src="./img/apk.svg" alt="apk">
+                            </a>
+                        </li>
+
+                        <li class="lists__item">
+                            <a href="#" class="lists__link">
+                                <img class="lists__link-image" src="./img/app-store.svg" alt="app-store">
+                            </a>
+                        </li>
+
+                        <li class="lists__item">
+                            <a href="#" class="lists__link">
+                                <img class="lists__link-image" src="./img/google-play.svg" alt="google-play">
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!--FOOTER-->
+
+
+    <!--	<script src="js/scripts.min.js.js"></script>-->
+
+    <!-- input mask -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.1/jquery.inputmask.bundle.min.js'></script>
+    <!-- ./ input mask -->
+
+    <script src="js/swiper.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

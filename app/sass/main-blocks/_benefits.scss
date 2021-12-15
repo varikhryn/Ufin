@@ -7,6 +7,15 @@
     flex-direction: column;
   }
 
+  &_service {
+    .benefits__container {
+      padding-left: 15px;
+      @media screen and (min-width: 768px) {
+        padding-left: 0;
+      }
+    }
+  }
+
   &__title {
     width: 100%;
     font-size: calc(22px + 8 * ((100vw - 320px) / (1200 - 320)));
@@ -73,6 +82,24 @@
     .label {
       margin-bottom: 3px;
     }
+
+    &_form {
+      margin-bottom: 50px;
+
+      & .benefits {
+        &__picture {
+          &::before {
+            padding-bottom: 120%;
+            @media screen and (min-width: 540px) {
+              padding-bottom: 80%;
+            }
+            @media screen and (min-width: 1200px) {
+              padding-bottom: 55%;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__picture {
@@ -81,6 +108,7 @@
     min-height: 150px;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
     @media screen and (min-width: 768px) {
       min-height: 300px;
     }
@@ -120,6 +148,7 @@
     max-width: 380px;
     box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
+    z-index: 2;
     @media screen and (min-width: 1200px) {
       padding: 43px 35px;
     }
@@ -161,10 +190,10 @@
     &-image {
       max-width: 100%;
       object-fit: contain;
-    }
 
-    &-text {
-      margin-left: 15px;
+      & + .benefits__label-text {
+        margin-left: 15px;
+      }
     }
   }
 
@@ -182,6 +211,12 @@
       &__info {
         &-description {
           padding: 0;
+        }
+      }
+
+      &__label {
+        & + h3 {
+          padding-top: 0;
         }
       }
     }
@@ -223,5 +258,43 @@
         }
       }
     }
+  }
+
+  &_full {
+    &__picture {
+      border-radius: 0;
+      @media screen and (min-width: 768px) {
+        border-radius: 0px 30px 0px 0px;
+      }
+    }
+
+    & .benefits {
+      &__item {
+        &:first-child {
+          width: 100%;
+          @media screen and (min-width: 768px) {
+            width: 50%;
+          }
+        }
+
+        h3 {
+          padding-top: 0;
+        }
+      }
+
+      &__label {
+        margin-bottom: 12px;
+      }
+    }
+
+    .m-link {
+      padding-top: 15px;
+      @media screen and (min-width: 1200px) {
+        padding-top: 25px;
+      }
+    }
+  }
+
+  &_step {
   }
 }

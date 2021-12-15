@@ -40,10 +40,10 @@ $color-dark-blue: #183855;
 }
 
 .color-alice-blue {
-  color: #edf4fb;
+  color: $color-alice-blue;
 }
 .bg-alice-blue {
-  background-color: #edf4fb;
+  background-color: $color-alice-blue;
 }
 
 .color-alice-blue-light {

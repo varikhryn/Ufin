@@ -21,7 +21,7 @@
       .card {
         &__image-text {
           &:first-child:not(:only-child) {
-            text-transform: lowercase;
+            text-transform: inherit;
             color: $color-base;
           }
 
@@ -77,8 +77,7 @@
     }
 
     &-text {
-      font-size: calc(12px + 2 * ((100vw - 320px) / (1200 - 320)));
-      word-break: break-all;
+      font-size: 14px;
       @include pf-semi-bold;
       color: $color-commpany;
       @media screen and (min-width: 1200px) {
@@ -183,7 +182,6 @@
   }
 
   &_product {
-    border: 1px solid #e6ecf2;
     box-shadow: none;
 
     & .card {
@@ -199,6 +197,10 @@
         &:first-child {
           margin-top: 0;
         }
+      }
+      &__item {
+        border: 1px solid #e6ecf2;
+        box-shadow: none;
       }
     }
   }
@@ -221,37 +223,52 @@
         }
 
         & + .card__image-title {
-          margin-left: 20px;
+          margin-left: 15px;
+          @media screen and (min-width: 768px) {
+            margin-left: 20px;
+          }
         }
       }
 
       &__item {
-        padding: 45px 20px 45px 30px;
+        padding: 20px;
         border: 1px solid #e6ecf2;
         border-radius: 5px;
         box-shadow: none;
+        @media screen and (min-width: 768px) {
+          padding: 45px 20px 45px 30px;
+        }
 
         &_bg {
-          padding: 30px 20px 30px 30px;
           border: none;
           background-color: #f4f7fb;
+        }
+
+        &_medium {
+          padding: 20px;
+          @media screen and (min-width: 768px) {
+            padding: 30px 10px 30px 20px;
+          }
         }
       }
 
       &__info {
         padding: 0;
-        margin-top: 40px;
+        margin-top: 20px;
+        @media screen and (min-width: 768px) {
+          margin-top: 40px;
+        }
 
         &_small {
           margin-top: 15px;
-          @media screen and (min-width: 1200px) {
+          @media screen and (min-width: 768px) {
             margin-top: 25px;
           }
         }
       }
       &__description {
         font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 768px) {
           font-size: 16px;
         }
 
@@ -262,10 +279,65 @@
         &_small {
           font-size: calc(12px + 2 * ((100vw - 320px) / (1200 - 320)));
           @include pf-regular;
-          @media screen and (min-width: 1200px) {
+          @media screen and (min-width: 768px) {
             font-size: 14px;
           }
         }
+      }
+
+      &__title {
+        & + .card__description,
+        & + .card__description_small {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &-small {
+      & .card {
+        &__item {
+          border: none;
+          padding: 0;
+
+          &:not(:last-child) {
+            padding-right: 20px;
+            @media screen and (min-width: 768px) {
+              padding-right: 50px;
+            }
+          }
+        }
+
+        &__info {
+          margin-top: 15px;
+          @media screen and (min-width: 768px) {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &__list {
+    padding: 8px 0;
+    margin-top: 15px;
+    @media screen and (min-width: 1200px) {
+      margin-top: 25px;
+    }
+
+    li {
+      position: relative;
+      list-style: none;
+      font-size: calc(12px + 2 * ((100vw - 320px) / (1200 - 320)));
+      @media screen and (min-width: 1200px) {
+        font-size: 14px;
+      }
+
+      &::before {
+        content: "•";
+        display: inline-block;
+        font-size: inherit;
+        line-height: inherit;
+        margin: 0 5px;
       }
     }
   }

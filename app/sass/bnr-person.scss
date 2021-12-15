@@ -39,18 +39,6 @@
       &__wrapper {
         color: #1c2024;
         position: relative;
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 100%;
-          background: url("../img/bg-blocksquate-point.svg") 0 0 / contain
-            no-repeat;
-          z-index: 1;
-        }
       }
       &__container {
         flex-direction: row-reverse;
@@ -58,16 +46,6 @@
 
       &__left {
         position: relative;
-        &::after {
-          content: "";
-          position: absolute;
-          top: 15%;
-          right: 0;
-          width: 50%;
-          height: 50%;
-          background: url("../img/bg-blocksquate.svg") 0 0 / contain no-repeat;
-          z-index: 1;
-        }
       }
     }
   }
@@ -77,17 +55,6 @@
     width: 100%;
     color: $color-white;
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background: url("../img/bg-point.svg") 0% 100% / contain no-repeat;
-      z-index: 1;
-    }
   }
 
   &__container {

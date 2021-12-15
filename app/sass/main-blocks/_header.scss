@@ -1,14 +1,19 @@
 .header {
+  display: flex;
   position: fixed;
   left: 0;
   right: 0;
   margin: auto;
   top: 0;
   width: 100%;
-  padding: 16px 0;
   color: #1c2024;
   z-index: 30;
   transition: background-color 0.3s ease;
+  min-height: 72px;
+  padding: 16px 0;
+  @media screen and (min-width: $is-descktop) {
+    padding: 0;
+  }
 
   @media screen and (min-width: $is-descktop) {
     &_opacity:not(._active) {
@@ -73,7 +78,7 @@
         & > li {
           & > a {
             color: inherit;
-            padding: 5px 14px 5px 5px;
+            padding: 27px 14px 27px 5px;
             transition: color 0.3s ease;
 
             &:hover {

@@ -46,12 +46,16 @@
   &__content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
     justify-content: flex-end;
     @include pf-semi-bold;
     position: relative;
     z-index: 1;
+    @media screen and (min-width: 768px) {
+      align-items: flex-start;
+    }
   }
 
   &__label {
@@ -59,18 +63,30 @@
     font-family: inherit;
     font-weight: inherit;
     margin-bottom: 12px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
 
   &__title {
     font-family: inherit;
     font-weight: inherit;
     font-size: 24px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
 
   &__description {
     @include pf-regular;
     opacity: 0.8;
     margin-top: 25px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
 
   &__link {

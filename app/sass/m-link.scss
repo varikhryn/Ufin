@@ -75,4 +75,135 @@
       transform: rotate(-45deg);
     }
   }
+
+  &_big {
+    h2 {
+      padding: 0;
+    }
+    & .m-link {
+      &__item {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e6ecf2;
+        border-radius: 5px;
+        position: relative;
+        padding: 15px;
+        margin-bottom: 15px;
+        @media screen and (min-width: 1200px) {
+          padding: 22px 31px 22px 37px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__title {
+        position: static;
+        width: 100%;
+        @include pf-semi-bold;
+
+        &::before,
+        &::after {
+          right: 15px;
+          @media screen and (min-width: 1200px) {
+            right: 31px;
+          }
+        }
+
+        &::before {
+          top: calc(50% - 2px);
+        }
+
+        &::after {
+          top: calc(50% + 2px);
+        }
+      }
+
+      &__description {
+        width: 100%;
+        font-size: calc(12px + 2 * ((100vw - 320px) / (1200 - 320)));
+        margin-top: 10px;
+        padding-right: 20px;
+        @media screen and (min-width: 1200px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &_icon {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: -8px auto;
+    @media screen and (min-width: 540px) {
+      margin: -8px;
+    }
+
+    & + .btn.benefits__link {
+      margin-top: 30px;
+    }
+    & .m-link {
+      &__item {
+        padding: 25px 22px;
+        display: flex;
+        align-items: center;
+        flex: 1 0 100%;
+        border: 1px solid #e6ecf2;
+        border-radius: 5px;
+        margin: 8px auto;
+        @media screen and (min-width: 540px) {
+          margin: 8px;
+          flex: 1 0 calc(50% - 16px);
+        }
+
+        &-step {
+          & + .m-link__item-step {
+            margin-left: 24px;
+          }
+        }
+
+        &-description {
+          font-size: calc(12px + 2 * ((100vw - 320px) / (1200 - 320)));
+          @include pf-semi-bold;
+          @media screen and (min-width: 1200px) {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &__icon-picture {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid $color-commpany;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 2px;
+          margin: auto;
+          right: 0;
+          background-color: $color-commpany;
+          height: 2px;
+          width: 6px;
+          border-radius: 5px;
+          transition: background-color 0.3s linear;
+        }
+
+        &::before {
+          top: calc(50% - 2px);
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: calc(50% + 2px);
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
 }

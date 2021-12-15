@@ -1,0 +1,13 @@
+.form {
+  &_column {
+    flex-direction: column;
+
+    & .form {
+      &__item {
+        & + .form__item {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
